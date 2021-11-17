@@ -1,0 +1,124 @@
+@font-face {
+	font-family: "CocoSharp";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/CocoSharp-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "CocoSharp";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/CocoSharp-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "CocoSharp";
+	font-style: normal;
+	font-weight: 800;
+	src: url("../fonts/CocoSharp-Extrabold.otf") format("opentype");
+}
+@font-face {
+	font-family: "Ernest and Emily";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/ErnestandEmily.otf") format("opentype");
+}
+.food-section,.food-section h4,.dinner .full span,.small, small{
+    font-family: "coco";
+}
+.food-section ul li,.food-section p,.food-section .form-check-label,
+.be-wrapper .navbar-nav span,
+.food-section .card .card-body span,.selection .price-span{
+    font-size: 18px !important;
+    font-family: "CocoSharp";
+    font-weight: 400 !important; 
+}
+.food-section .card-header h4,.option3-section .full .head h4{
+    font-family: "coco";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.food-section .card-footer{
+    padding: 0px !important;
+    background-color: #fff !important;
+}
+.food-section .card-footer .selection{
+    padding: 20px;
+    
+}
+.dinner .full span{ 
+    font-size: 18px;
+}
+.full-custom .content{
+    height: auto;
+}
+.be-left-sidebar .sidebar-elements .active-first.main-option a{
+    background-color: rgba(142, 195, 155, 0.7) !important;
+}
+.buffet-main-options .inner-title h3{
+    font-size: 32px !important; 
+    font-size: "coco" !important;
+}
+.buffet-main-options .inner-title ul li{
+    font-size: 18px !important; 
+    font-size: "coco" !important;
+    font-weight: normal !important;
+}
+.food-section .full.full-custom .p-2{
+    padding-top: 30px !important;
+}
+.tea-page .full-custom .content{
+    height: 120px;
+}
+.lunch-page .full-custom .content{
+    height: 230px;
+}
+.dinner-page .full-custom .content{
+    height: 220px;
+}
+.promise_content h3,.catering_title p,
+.promise_content h2,.catering_title h2,.about_content p,
+.about_content h2,.about_content .about-p2,.slide_gel_title p,#slide_gal_area .slide_gel_title h2,
+.eapps-instagram-feed-title,.praise_title h2,.ourcafe_content h2,.ourcafe_content a,.catering_content h2,
+.catering_content a,.footer-social-icon span,
+.banner_overlay_content.boct a,.promise_contentp,.top_review1 p,.ser_icons p,
+.manu_title p,.manu_title h2,.manu_title .mtp,
+.confirm-section .review_ul ul li,.confirm-section .time p{
+    font-family: "CocoSharp";
+    
+}
+.promise_content h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+.promise_content h2,.catering_title h2{
+   font-size: 57px;
+   font-weight: 800;
+}
+/* Cart page css */
+.cart-page-title h3{
+    font-size: 32px;
+}
+.confirm-section .review_ul ul li,.confirm-section .review_ul p{
+    font-size: 18px;
+}
+.confirm-section .review_ul ul li{
+    /* margin-bottom: 10px; */
+    line-height: 1.5;
+}
+@media (max-width:575px){
+    .food-section .left-gray{
+        height: unset;
+    }
+    .navbar-nav{
+        width: 100%;
+    }
+    .be-wrapper .navbar-nav span {
+        font-size: 14px !important;
+    }
+    .be-left-sidebar .left-sidebar-toggle{
+        font-weight: normal !important;
+        font-size: 18px !important;
+    }
+}
