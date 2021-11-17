@@ -5,7 +5,7 @@
         $option = 'graze';
     ?>
 
-    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123" style="background-color: #fff;" >
+    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123"  style="background-color: #D1E6D7;" >
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
         @include('layouts.catering-side-menu')
         
@@ -16,7 +16,7 @@
                     <div class="food-section" style="margin-top: 44px;">
                         <div class="container-fluid">
 
-                            <hr>
+                          
                             {{--                        GRAZE CARD START--}}
                             <div class="row mt-5 graze-container">
                                 <div class="col-md-12">

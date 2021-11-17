@@ -11,7 +11,7 @@
         
         <form id="menu">
             @csrf
-            <div class="be-content" id="main-option">
+            <div class="be-content dinner-page" id="main-option">
                 <div class="main-content">
                     <div class="dinner-cafe-section py-4">
                         <div class="container-fluid buffet-main-options">
@@ -64,7 +64,7 @@
                                                                             </div>
                                                                             <div class="col-md-4 text-center tooltip-div">
                                                                                 <img src="/assets/front/assets/img/green-2.png" alt="man icon">
-                                                                                <p class="mb-0">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
+                                                                                <p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
                                             <span class="tooltiptext">No. of People</span>                                </div>
                                                                             <div class="col-md-1">
                                                                                 <div class="box3 float-right">
@@ -125,7 +125,7 @@
                                                                         </div>
                                                                         <div class="col-md-4 text-center tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-2.png" alt="man icon">
-                                                                            <p class="mb-0">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
+                                                                            <p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
                                                                             <span class="tooltiptext">No. of People</span>
                                                                         </div>
                                                                         <div class="col-md-1">

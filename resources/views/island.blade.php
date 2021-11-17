@@ -5,7 +5,7 @@
         $option = 'island';
     ?>
 
-    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123" style="background-color: #fff;" >
+    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123"  style="background-color: #D1E6D7;" >
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
         @include('layouts.catering-side-menu')
         

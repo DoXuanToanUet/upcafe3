@@ -13,7 +13,7 @@
     $is_active = 'review';
     ?>
 
-    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123" style="background-color: white;">
+    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123 review-page" style="background-color: white;">
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
 
         <div class="be-left-sidebar">

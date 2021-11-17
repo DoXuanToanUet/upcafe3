@@ -254,6 +254,11 @@
                     $('.view-my-selection-button').prop('disabled', true);
                 }
             });
+            $body.on('change', '.form-check-input', function () {
+                if ($('.form-check-input:checked')) {
+                    console.log("da check");
+                }
+            });
         });
     </script>
 @endsection

@@ -163,7 +163,7 @@
     $is_active = 'details';
     ?>
 
-    <div class="be-wrapper be-fixed-sidebar " style="background-color: white">
+    <div class="be-wrapper be-fixed-sidebar detail-page" style="background-color: white">
         @include('layouts.checkout-heading')
 
         <div class="be-left-sidebar">
@@ -186,7 +186,7 @@
         <div class="be-content details-delivery">
             <div class="main-content">
                 <div class="delivery-section">
-                    <div class="container">
+                    <!-- <div class="container"> -->
                         <!-- <form action=""> -->
 
 
@@ -195,7 +195,7 @@
                             <input type="hidden" value="1" name="type">
                             <input type="hidden" name="date" class="selected-date">
                             <div class="col-lg-4 col-12 review-table">
-                                <div class="full p-4 pb-4 full min-height why-just">
+                                <div class="full p-4 pb-4 full why-just min-heigh">
                                     <h4 class="text-center pb-3">We just need a few more
                                         details.</h4>
                                     <div class="input m-auto text-center">
@@ -210,11 +210,12 @@
 
                                     <input type="text" class="form-control mx-auto" placeholder="Email" name="email"
                                            required>
+                                      <p class="note-info">Please note, all orders must be made 48-hours in advance of your event.</p>     
                                 </div>
                             </div>
                     </div>
-                    <div class="col-lg-8 col-12 all-ok review-table">
-                        <div class="row full min-height">
+                    <div class="col-lg-8 col-12 all-ok delivery-pickup review-table ">
+                        <div class="row full min-heigh">
                             <div class="col-md-6 p-0">
                                 <div class="input-group date calendar-container p-0 m-0">
                                     <div class="container-calendar">
@@ -275,7 +276,7 @@
                     </div>
                     </form>
                     <!-- </form> -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
