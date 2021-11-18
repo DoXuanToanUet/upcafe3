@@ -230,6 +230,16 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 .review-table-detail .full{
     padding: 40px !important;
 }
+.border-custom{
+    border: 3px solid #8EC39B !important;
+    border-radius: 2px !important;
+}
+.border-custom .head,.border-custom .card-header{
+    background-color: rgba(142, 195, 155, 0.2) !important;
+}
+.border-background{
+    background: rgba(142, 195, 155, 0.2);
+}
 @media (max-width:575px){
     .food-section .left-gray{
         height: unset;

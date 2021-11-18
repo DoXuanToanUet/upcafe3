@@ -170,3 +170,136 @@ $(document).on("submit", '#editMenu', function(event){
         },
     });
 });
+
+// $(document).on('click', '.form-check-input', function () {
+//     $('.option3-section .full-custom').removeClass('border-custom');
+//     if ($('.form-check-input:checked')) {
+
+//         $(this).closest('.option3-section .full-custom').toggleClass('border-custom');
+//         // $(this).closest('.card').css('border','2px solid #8EC39B');
+//         // $(this).closest('.option3-section').css('border','2px solid #8EC39B');
+//         // console.log($(this));
+//     } else{
+//         // $(this).closest('.option3-section .full-custom').css('border','0px');
+//     }
+// });
+
+// $('.breakfast-page').on('click', '.form-check-input', function () {
+//    console.log("object");
+//     $(this).closest('.card').removeClass('border-custom');
+//     if ($('.form-check-input:checked')) {
+//         $(this).closest('.card').toggleClass('border-custom');
+//         // $(this).closest('.card').css('border','2px solid #8EC39B');
+//         // $(this).closest('.option3-section').css('border','2px solid #8EC39B');
+//         // console.log($(this));
+//     } else{
+//         // $(this).closest('.option3-section .full-custom').css('border','0px');
+//     }
+// });
+
+
+// Breakfast Js event check border
+$(document).on('click', '.check-breakfast', function () {
+    if($(this).is(":checked")) {
+        $('.check-breakfast').parent().parent().parent().parent().removeClass('border-custom');
+        $(this).parent().parent().parent().parent().toggleClass('border-custom');
+    }
+})
+
+$(document).on('click', '.setup-breakfast-radio', function () {
+    if($(this).is(":checked")) {
+        $('.setup-breakfast-radio').parent().removeClass('border-background');
+        $(this).parent().toggleClass('border-background');
+    }
+})
+
+// AM Tea event check border
+$(document).on('click', '.check-border-input', function () {
+    if($(this).is(":checked")) {
+        $('.check-border-input').parent().parent().parent().parent().parent().removeClass('border-custom');
+        $(this).parent().parent().parent().parent().parent().toggleClass('border-custom');
+    }
+})
+
+// Dinner event check border
+$(document).on('click', '.check-dinner-input', function () {
+    if($(this).is(":checked")) {
+        $('.check-dinner-input').parent().parent().parent().parent().parent().removeClass('border-custom');
+        $(this).parent().parent().parent().parent().parent().toggleClass('border-custom');
+    }
+})
+$(document).on('click', '.setup-dinner-radio', function () {
+    if($(this).is(":checked")) {
+        $('.setup-dinner-radio').parent().removeClass('border-background');
+        $(this).parent().toggleClass('border-background');
+    }
+})
+
+// Island  event check border
+
+$(document).on('click', '.checkbox-island', function () {
+    if($(this).is(":checked")) {
+        if($(this).is(":checked")) {
+            $('.checkbox-island').parent().parent().removeClass('border-custom');
+            $(this).parent().parent().toggleClass('border-custom');
+        }
+    }
+})
+$(document).on('click', '.island-options,.high-tea-options', function () {
+    if($(this).is(":checked")) {
+        // $('.island-options').parent().removeClass('border-background');
+        $(this).parent().addClass('border-background');
+    } else{
+        $(this).parent().removeClass('border-background');
+    }
+})
+
+// Graze event check border
+$(document).on('click', '.check-more-input', function () {
+    if($(this).is(":checked")) {
+        $('.check-more-input').parent().parent().removeClass('border-custom');
+        $(this).parent().parent().toggleClass('border-custom');
+    }
+})
+// Hight Tea event check border
+$(document).on('click', '.high-tea,.platter', function () {
+    if($(this).is(":checked")) {
+        $('.high-tea').parent().parent().parent().removeClass('border-custom');
+        $('.platter').parent().parent().parent().removeClass('border-custom');
+        $(this).parent().parent().parent().toggleClass('border-custom');
+    }
+})
+
+$(document).on('click', '.platter-walk-setup', function () {
+    if($(this).is(":checked")) {
+        $('.platter-walk-setup').parent().parent().parent().removeClass('border-custom');
+        $(this).parent().parent().parent().toggleClass('border-custom');
+    }
+})
+$(document).on('click', '.xmas-themed', function () {
+    if($(this).is(":checked")) {
+        // $('.island-options').parent().removeClass('border-background');
+        $(this).parent().parent().parent().addClass('border-custom');
+    } else{
+        $(this).parent().parent().parent().removeClass('border-custom');
+    }
+})
+
+
+// 
+// 
+// $('.breakfast-page .form-check-input').each(function(){
+    
+//     $(this).on("click", function(){
+//         $(this).closest('.card').removeClass('border-custom');
+//         console.log("input checkbox");
+//         if ($('.form-check-input:checked')) {
+//             $(this).closest('.card').toggleClass('border-custom');
+//         }
+     
+//     })
+// })
+// $(document).on('change', '.breakfast-page .full-buffet .form-check-input', function () {
+//     $(this).closest('.card').toggleClass('border-custom');
+// //    console.log("buffet");
+// });

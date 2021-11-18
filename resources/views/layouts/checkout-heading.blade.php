@@ -41,6 +41,10 @@
             </ul> -->
             <ul class="nav navbar-nav float-right be-icons-nav">
                 <li class="nav-item "><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"> <span  class="line" style="font-size: 16px; font-weight: 500 !important;"> <img src="/assets/front/assets/img/all user.png" width="10%" >&nbsp; Minimum Order </span>  <span style="font-size: 16px;font-weight: 500 !important;"><img src="/assets/front/assets/img/single user.png" width="5%">&nbsp; Price per person </span></span></a> </li>
+                <li class="flex">
+                    <span class="quantity-count">4</span>
+                    <p>v</p>
+                </li>
             </ul>
         </div>
     </div>

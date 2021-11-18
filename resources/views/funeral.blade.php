@@ -28,7 +28,7 @@
                                         <div class="title doll mb-5">
 
                                             <div class="card"
-                                                 style="margin-top: 15px; border: none !important; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                                 style="margin-top: 15px; border: none ; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                                 <div class="card-header p-4 d-flex justify-content-between"
                                                      style="border: none !important; background: rgb(232 232 232);">
                                                     <h4>{!! $funeral->name !!}</h4>
@@ -37,7 +37,7 @@
                                                             <span class="price-span">$ {{ number_format($funeral->price, 2) }} pp</span>
                                                         @endif
                                                     @endif
-                                                    <input class="form-check-input setup-buffet-radio funeral"
+                                                    <input class="form-check-input setup-buffet-radio funeral check-more-input"
                                                            type="radio" value="{{ $funeral->id }}"
                                                            id="flexCheckDefault" name="funeral">
                                                 </div>
@@ -50,7 +50,7 @@
                                                 <span class="selection-name"
                                                       style="font-size: 16px; color: #000; text-transform:capitalize;">{!! $setup->name !!}</span>
                                                                 <span class="price-span">$ {{ number_format($setup->price, 2) }} pp</span>
-                                                                <input class="form-check-input setup-buffet-radio funeral-setup"
+                                                                <input class="form-check-input setup-buffet-radio funeral-setup "
                                                                        type="radio"
                                                                        value="{{ $setup->id }}" id="flexCheckDefault"
                                                                        name="funeral-setup">

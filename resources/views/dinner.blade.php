@@ -55,7 +55,7 @@
                                                     <div class="row" style="margin-top: 44px;">
                                                         <div class="col-md-12">
 
-                                                                <div class="full full-custom card border-0">
+                                                                <div class="full full-custom card" style="border:none">
                                                                     <div class="head card-header" style="background-color: #F4F4F4; border: none;">
 
                                                                         <div class="row">
@@ -68,7 +68,7 @@
                                             <span class="tooltiptext">No. of People</span>                                </div>
                                                                             <div class="col-md-1">
                                                                                 <div class="box3 float-right">
-                                                                                    <input class="form-check-input setup-radio" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                                    <input class="form-check-input setup-radio check-dinner-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -87,7 +87,7 @@
 
                                                                     @if(isset($data['setup']) && count($data['setup']) > 0)
 
-                                                                        <div class="card-footer border-0 setup setup-{{$data['main-options'][$i]['id']}}" style="background: rgba(142, 195, 155, 0.2);">
+                                                                        <div class="card-footer  setup setup-{{$data['main-options'][$i]['id']}}" style="background: rgba(142, 195, 155, 0.2); border:none;">
 
                                                                             <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
                                                                             @foreach($data['setup'] as $s)
@@ -95,7 +95,7 @@
                                                                                 <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                                                                     <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
                                                                                     <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                                    <input class="form-check-input" type="checkbox" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+                                                                                    <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
 
                                                                                 </div>
                                                                             @endforeach
@@ -117,8 +117,8 @@
                                                 <div class="option3-section">
                                                     <div class="row" style="margin-top: 44px;">
                                                         <div class="col-md-12">
-                                                            <div class="full full-custom card border-0">
-                                                                <div class="head card-header" style="background-color: #F4F4F4; border: none;">
+                                                            <div class="full full-custom card " style="border:none;">
+                                                                <div class="head card-header" style="background-color: #F4F4F4; ">
                                                                     <div class="row">
                                                                         <div class="col-md-7">
                                                                             <h4>{{$data['main-options'][$i]['name']}}</h4>
@@ -130,7 +130,7 @@
                                                                         </div>
                                                                         <div class="col-md-1">
                                                                             <div class="box3 float-right">
-                                                                                <input class="form-check-input setup-radio" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                                <input class="form-check-input setup-radio check-dinner-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -152,7 +152,7 @@
                                                                         <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                                                             <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
                                                                             <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                            <input class="form-check-input" type="checkbox" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+                                                                            <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
 
                                                                         </div>
                                                                     @endforeach

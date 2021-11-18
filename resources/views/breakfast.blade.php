@@ -5,7 +5,7 @@
     $option = 'breakfast';
     ?>
 
-    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123" style="background-color: #D1E6D7;">
+    <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123 breakfast-page" style="background-color: #D1E6D7;">
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
         @include('layouts.catering-side-menu')
 
@@ -31,13 +31,13 @@
                                                 </div>
                                                 @foreach($data['finger-food'] as $d)
                                                     <div class="card"
-                                                         style="margin-top: 35px; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                                         style="margin-top: 35px;  border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                                         <div class="card-header p-4"
                                                              style="border: none !important; background: rgb(232 232 232);">
                                                             <h4>{{ $d->name }}
                                                                 <span class="float-right"
                                                                       style="float: right !important;">
-                                      <input class="form-check-input breakfast" type="radio" value="{{$d->id}}"
+                                      <input class="form-check-input breakfast check-breakfast" type="radio" value="{{$d->id}}"
                                              id="flexCheckChecked" name="finger-food">
                                                         </span>
                                                             </h4>
@@ -74,7 +74,7 @@
                                 <div class="col-lg-4 col-12">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="full p-3"
+                                            <div class="full p-3 full-buffet"
                                                  style="background-color: transparent; margin-top: 44px;">
                                                 <div class="title">
                                                     <h3>BUFFET
@@ -86,13 +86,13 @@
                                                 </div>
                                                 @foreach($data['buffet'] as $d)
                                                     <div class="card"
-                                                         style="margin-top: 34px; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+                                                         style="margin-top: 34px; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
                                                     ">
                                                     <div class="card-header p-4" style="background: rgb(232 232 232);">
                                                         <h4>
                                                             {{$d->name}}
                                                             <span class="float-right">
-                                                                <input class="form-check-input coupon_question setup-radio breakfast-buffet"
+                                                                <input class="form-check-input coupon_question setup-radio breakfast-buffet check-breakfast"
                                                                        type="radio" name="buffet" value="{{$d->id}}"
                                                                        id="flexCheckDefault"/>
                                                             </span>
@@ -134,7 +134,7 @@
                                                                             <span class="selection-name"
                                                                                   style="font-size: 18px; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
                                                                             <span class="price-span">$ {{ number_format($s->price, 2) }}</span>
-                                                                            <input class="form-check-input setup-buffet-radio"
+                                                                            <input class="form-check-input setup-buffet-radio setup-breakfast-radio"
                                                                                    type="radio" value="{{$s->id}}"
                                                                                    id="flexCheckDefault" name="setup">
 
@@ -254,11 +254,7 @@
                     $('.view-my-selection-button').prop('disabled', true);
                 }
             });
-            $body.on('change', '.form-check-input', function () {
-                if ($('.form-check-input:checked')) {
-                    console.log("da check");
-                }
-            });
+           
         });
     </script>
 @endsection

@@ -29,7 +29,7 @@
                                         <div class="title doll mb-5">
 
                                             <div class="card"
-                                                 style="margin-top: 15px; border: none !important; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                                 style="margin-top: 15px; border: none ; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                                 <div class="card-header p-4"
                                                      style="border: none !important; background: rgb(232 232 232);">
                                                     <div class="selection"
@@ -58,7 +58,7 @@
                                     <div class="title doll mb-5">
 
                                         <div class="card"
-                                             style="margin-top: 15px; border: none !important; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                             style="margin-top: 15px; border: none; border-radius: 0 !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                             <div class="card-header p-4"
                                                  style="border: none !important; background: rgb(232 232 232);">
                                                 <div class="selection"

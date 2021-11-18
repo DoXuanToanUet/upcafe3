@@ -35,7 +35,7 @@
                                                                         </div>
                                                                         <div class="col">
                                                                             <div class="box3 float-right">
-                                                                                <input class="form-check-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options">
+                                                                                <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -76,7 +76,7 @@
                                                                         </div>
                                                                         <div class="col">
                                                                             <div class="box3 float-right">
-                                                                                <input class="form-check-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                                <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                             </div>
                                                                         </div>
                                                                     </div>
