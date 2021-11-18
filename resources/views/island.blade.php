@@ -149,14 +149,40 @@
 
 @section('scripts')
     <script>
-        $('body').on('change', '.form-check-input', function () {
-            if ($('.form-check-input:checked').length > 0) {
-                if ($('.view-my-selection-button').prop('disabled')) {
-                    $('.view-my-selection-button').prop('disabled', false);
+      $(function () {
+            const $body = $('body');
+            $body.on('change', '.island', function (event) {
+                const island = $(event.target).val();
+                $('.selection-island').each(function (index, element) {
+                    if ($(element).hasClass('island-' + island)) {
+                        $(element).removeClass('d-none');
+                        if ($(element).find('.island-setup:checked').length === 0) {
+                            $(element).find('.island-setup:first').prop('checked', true);
+                        }
+                    } else {
+                        $(element).addClass('d-none');
+                        $(element).find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
+                    }
+                });
+                $('.setup-island').each(function (index, element) {
+                    if ($(element).hasClass('island-' + island)) {
+                        $(element).removeClass('d-none');
+                    } else {
+                        $(element).addClass('d-none');
+                        $(element).find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
+                    }
+                });
+
+            });
+            $body.on('change', '.form-check-input', function () {
+                if ($('.form-check-input:checked').length > 0) {
+                    if ($('.view-my-selection-button').prop('disabled')) {
+                        $('.view-my-selection-button').prop('disabled', false);
+                    }
+                } else {
+                    $('.view-my-selection-button').prop('disabled', true);
                 }
-            } else {
-                $('.view-my-selection-button').prop('disabled', true);
-            }
+            });
         });
     </script>
 @endsection

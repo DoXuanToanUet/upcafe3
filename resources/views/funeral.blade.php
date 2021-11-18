@@ -104,75 +104,10 @@
     <script>
         $(function () {
             const $body = $('body');
-            $body.on('change', '.island', function (event) {
-                const island = $(event.target).val();
-                $('.selection-island').each(function (index, element) {
-                    if ($(element).hasClass('island-' + island)) {
-                        $(element).removeClass('d-none');
-                        if ($(element).find('.island-setup:checked').length === 0) {
-                            $(element).find('.island-setup:first').prop('checked', true);
-                        }
-                    } else {
-                        $(element).addClass('d-none');
-                        $(element).find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
-                    }
-                });
-                $('.setup-island').each(function (index, element) {
-                    if ($(element).hasClass('island-' + island)) {
-                        $(element).removeClass('d-none');
-                    } else {
-                        $(element).addClass('d-none');
-                        $(element).find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
-                    }
-                });
-
-            });
-            $body.on('change', '.high-tea', function (event) {
-                $('.high-tea').each(function (index, element) {
-                    if ($(element).prop('checked') === true) {
-                        $(element).closest('.card').find('.setup').removeClass('d-none');
-                    } else {
-                        $(element).closest('.card').find('.setup').addClass('d-none');
-                        $(element).closest('.card').find('.high-tea-options').prop('checked', false);
-                    }
-                });
-            });
             $body.on('change', '.funeral-setup', function (event) {
                 $('.funeral').prop('checked', false);
                 $(event.target).closest('.card').find('.funeral').prop('checked', true);
             });
-            $body.on('change', '.high-tea', function (event) {
-                $('.high-tea').each(function (index, element) {
-                    if ($(element).prop('checked') === true) {
-                        $(element).closest('.card').find('.setup').removeClass('d-none');
-                    } else {
-                        $(element).closest('.card').find('.setup').addClass('d-none');
-                        $(element).closest('.card').find('.high-tea-options').prop('checked', false);
-                    }
-                });
-            });
-            $body.on('change', '.platter', function (event) {
-                if ($(event.target).hasClass('platter-walk')) {
-                    if ($('.platter-walk-setup:checked').length === 0) {
-                        $('.platter-walk-setup:first').prop('checked', true);
-                    }
-                } else {
-                    $('.platter-walk-setup').prop('checked', false);
-                }
-            });
-            const $xmas = $('.xmas-themed');
-            $body.on('change', '.xmas-themed', function (event) {
-                const xmas = $(event.target).val();
-                $('.selection-xmas, .setup-xmas').each(function (index, element) {
-                    if ($(element).hasClass('xmas-' + xmas)) {
-                        $(element).removeClass('d-none');
-                    } else {
-                        $(element).addClass('d-none');
-                        $(element).find('input[type="checkbox"], input[type="radio"]').prop('checked', false);
-                    }
-                });
-            });
-
             $body.on('change', '.form-check-input', function () {
                 if ($('.form-check-input:checked').length > 0) {
                     if ($('.view-my-selection-button').prop('disabled')) {

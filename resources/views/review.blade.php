@@ -6,7 +6,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         border: 0;
-        border-top: 0px solid rgba(0, 0, 0, .1) !important;
+        border-top: 1px solid rgba(0, 0, 0, .4) !important;
     }
 </style>
     <?php
@@ -44,7 +44,7 @@
                             <div class="row margin-top-desktop">
 
                                     @csrf
-                                    <div class="col-lg-9 col-12 review-table">
+                                    <div class="col-lg-9 col-12 review-table review-table-detail">
                                         <div class="full p-5">
                                             @foreach($data as $d)
                                                 <input type="hidden" value="{{$d['menu']['id']}}" name="id[]">
@@ -108,7 +108,9 @@
                                                 here (fee apply)</p>
                                             <p style="color: green">*All items are excluding GST, You have to pay the GST at the time of payment</p>
                                         </div>
-
+                                        <div class="button text-center mt-5">
+                                            <a class="btn btn-add-more w-80" href="{{ url('catering/breakfast') }}">ADD MORE </a>
+                                        </div>
                                         <div class="button text-center mt-5">
                                             <button class="btn btn-success view-my-selection-button w-100">CONFIRM
                                             </button>
@@ -173,18 +175,6 @@
             margin: 0px;
         }
 
-        .minus, .plus {
-            width: 20px;
-            height: 20px;
-            background: #f2f2f2;
-            border-radius: 4px;
-            padding: 8px 5px 8px 5px;
-            border: 1px solid #ddd;
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
         input {
             height: 34px;
             width: 100px;
@@ -210,34 +200,24 @@
             font-weight: bold !important;
         }
 
-        .minus {
-            width: 25px;
-            height: 25px;
+        .minus,.plus {
+            width: 32px;
+            height: 32px;
             background: #f2f2f2;
-            border-radius: 4px;
-            padding: 0px 6px 11px 6px;
+            border-radius: 50%;
             border: 0px solid #ddd;
-            display: inline-block;
             font-weight: bold;
             vertical-align: middle;
             text-align: center;
-            border-radius: 12px;
             font-size: 18px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .plus {
-            width: 25px;
-            height: 25px;
             background: rgba(142, 195, 155, 0.2);
-            border-radius: 4px;
-            padding: 0px 6px 11px 6px;
-            border: 0px solid #ddd;
-            display: inline-block;
-            font-weight: 300;
-            vertical-align: middle;
-            text-align: center;
-            border-radius: 12px;
-            font-size: 18px;
         }
 
         .be-left-sidebar:before {

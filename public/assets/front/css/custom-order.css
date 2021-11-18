@@ -89,7 +89,8 @@
 .banner_overlay_content.boct a,.promise_contentp,.top_review1 p,.ser_icons p,
 .manu_title p,.manu_title h2,.manu_title .mtp,
 .confirm-section .review_ul ul li,.confirm-section .time p,
-.delivery-section .full h4,.delivery-section input[type='text']{
+.delivery-section .full h4,.delivery-section input[type='text'],
+.buffet-main-options .title-buffet h3{
     font-family: "CocoSharp";
     
 }
@@ -112,9 +113,12 @@
     /* margin-bottom: 10px; */
     line-height: 1.5;
 }
-input[type=radio]:after{
+input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     width: 30px;
     height: 30px;
+}
+.form-check-input:focus{
+    box-shadow: none;
 }
 .tea-page .full-custom .content{
     height:140px;
@@ -128,7 +132,7 @@ input[type=radio]:after{
 #sub-option img{
     object-fit: contain;
 }
-.review-page .be-left-sidebar:before,.detail-page .be-left-sidebar:before{
+.be-left-sidebar:before{
     border-right: 0px !important;
 }
 .delivery-section{
@@ -162,6 +166,69 @@ input[type=radio]:after{
 }
 .delivery-pickup{
     padding-left: 30px !important; 
+}
+.btn.btn-add-more{
+    border: 3px solid #8EC39B;
+   
+    color: #8EC39B;
+    padding: 20px 0px;
+    margin: 50px 0px;
+    transition: all .3s ease;
+    font-size: 18px;
+}
+.review-page .btn.view-my-selection-button,.review-page .btn.btn-add-more{
+    font-family: "CocoSharp";
+    width: 65% !important;
+    border-radius: 2px;
+}
+.btn.view-my-selection-button{
+    font-size: 20px;
+}
+.btn.btn-add-more:hover{
+    background-color: #8EC39B;
+    color: #fff;
+}
+.review-table-detail{
+    padding-right: 50px !important;
+}
+.be-left-sidebar .sidebar-elements>li{
+    border:2px solid #1B1A19 !important;
+    border-radius: 2px;
+}
+.be-left-sidebar .sidebar-elements>li>a{
+    color: #1B1A19;
+    font-size: 24px;
+    padding: 0px 10px ;
+}
+.be-left-sidebar .sidebar-elements a .additional{
+    font-size: 16px;
+    color: #1B1A19;
+}
+.promise_content{
+    margin-top: 160px;
+}
+.xmas-themed-container .card-body{
+    min-height: 200px;
+}
+.food-section .card-footer{
+    padding-bottom: 10px !important;
+}
+.selection .selection-name {
+    width: 50%;
+}
+.user-group-img span{
+    font-size: 18px;
+    color: #8EC39B  !important;
+}
+.cart-page-title h3{
+    text-transform: uppercase;
+}
+.confirm-section .time p {
+    font-size: 18px;
+    line-height: 32px;
+}
+.review-table-detail .full{
+    padding: 40px !important;
 }
 @media (max-width:575px){
     .food-section .left-gray{

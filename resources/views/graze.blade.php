@@ -104,6 +104,8 @@
 
 @section('scripts')
     <script>
+    $(function () {
+        const $body = $('body');
         $('body').on('change', '.form-check-input', function () {
             if ($('.form-check-input:checked').length > 0) {
                 if ($('.view-my-selection-button').prop('disabled')) {
@@ -113,5 +115,6 @@
                 $('.view-my-selection-button').prop('disabled', true);
             }
         });
+    });
     </script>
 @endsection
