@@ -70,7 +70,7 @@ ul li,ul li a {
     list-style: none !important;
     text-decoration: none !important;
 }
-.main-page .button-section span::before{
+/* .main-page .button-section span::before{
     content: " ";
     width: 60px;
     height: 2px;
@@ -78,7 +78,7 @@ ul li,ul li a {
     background-color: red;
     display: block;
     transform: translateY(-14px);
-}
+} */
 
 
 @media screen and (max-width:810px) {
@@ -695,7 +695,7 @@ input[type='checkbox']:checked:after {
 
 
 
-            .main-page .button-section span::before {
+            /* .main-page .button-section span::before {
                 content: " ";
                 width: 33px;
                 height: 2px;
@@ -704,7 +704,7 @@ input[type='checkbox']:checked:after {
                 display: block;
                 position: absolute;
                 transform: translateY(-26px);
-            }
+            } */
 
 
 

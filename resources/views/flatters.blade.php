@@ -2,7 +2,7 @@
 @section('title', 'PLATTERS')
 @section('content')
     <?php
-    $option = 'more';
+    $option = 'flatters';
     ?>
 
     <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123" style="background-color: #D1E6D7;">

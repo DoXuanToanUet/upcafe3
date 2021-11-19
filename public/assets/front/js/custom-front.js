@@ -303,3 +303,29 @@ $(document).on('click', '.xmas-themed', function () {
 //     $(this).closest('.card').toggleClass('border-custom');
 // //    console.log("buffet");
 // });
+
+// $(document).on('change', '.check-additional', function () {
+//     console.log(1);
+//     var count = 0;
+//     if($(this).is(':checked')) {
+//         $('#additional-breakfast').val(1);
+//     }
+
+//     $('.check-additional').each(function( index ) {
+//         if($(this).is(':checked')) {
+//             count = count + 1;
+//         }
+//     });
+
+//     if(count > 0 ) {
+//         $('#additional-breakfast').val(1);
+//     } else {
+//         $('#additional-breakfast').val(0);
+//     }
+// });
+
+//     $('.check-additional').each(function( index ) {
+//         if($(this).is(':checked')) {
+//             count = count + 1;
+//         }
+//     });

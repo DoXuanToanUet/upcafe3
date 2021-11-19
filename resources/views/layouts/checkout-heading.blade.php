@@ -21,8 +21,8 @@
                         <div class="col-lg-12">
                             <div class="button-section" style="transform: translate(-46px, -1px);">
                                 <ul class=" d-flex">
-                                    <li> <a class="{{ empty($currentPage) || $currentPage == 'catering' ? 'show' : '' }}" href="/catering/breakfast">Select</a> <span></span></li>
-                                    <li> <a class="{{ !empty($currentPage) && $currentPage == 'review' ? 'show' : '' }} ml-2" href="/review">Review</a> <span></span></li>
+                                    <li> <a class="{{ empty($currentPage) || $currentPage == 'catering' || $currentPage == 'review' || $currentPage == 'details' ? 'show' : '' }} " href="/catering/breakfast">Select</a> <span></span></li>
+                                    <li> <a class="{{ !empty($currentPage) && $currentPage == 'review'|| $currentPage == 'details' ? 'show' : '' }} ml-2" href="/review">Review</a> <span></span></li>
                                     <li> <a class="{{ !empty($currentPage) && $currentPage == 'details' ? 'show' : '' }} ml-2" href="/details">Details</a> </li>
                                 </ul>
                             </div>
@@ -42,7 +42,14 @@
             <ul class="nav navbar-nav float-right be-icons-nav">
                 <li class="nav-item "><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"> <span  class="line" style="font-size: 16px; font-weight: 500 !important;"> <img src="/assets/front/assets/img/all user.png" width="10%" >&nbsp; Minimum Order </span>  <span style="font-size: 16px;font-weight: 500 !important;"><img src="/assets/front/assets/img/single user.png" width="5%">&nbsp; Price per person </span></span></a> </li>
                 <li class="flex">
-                    <span class="quantity-count">4</span>
+                    <?php
+                        $count = 0;
+                        $cart = Session::get('catering');
+                        if($cart != null) {
+                            $count = $cart['total'];
+                        }
+                    ?>
+                    <span class="quantity-count">{{ $count }}</span>
                     <p>v</p>
                 </li>
             </ul>

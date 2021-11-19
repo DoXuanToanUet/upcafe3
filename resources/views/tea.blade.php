@@ -40,7 +40,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="p-2" style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" >
+                                                                <div class="p-2" style="background-color: white; border: none !important; border-radius: none !important; " >
                                                                     <div class="content">
                                                                         {!! $data['main-options'][$i]['content'] !!}
                                                                     </div>
@@ -81,7 +81,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="p-2" style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" >
+                                                                <div class="p-2" style="background-color: white; border: none !important; border-radius: none !important;" >
                                                                     <div class="content">
                                                                         {!! $data['main-options'][$i]['content'] !!}
                                                                     </div>
@@ -219,6 +219,15 @@
                                                         <div class="col-lg-4 col-12">
                                                             <div class="check-1">
                                                                 <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="savoury[]"> &nbsp; <span>{{$d->name}}</span>
+                                                                @if($d->gluten)
+                                                                    <img class="addition-icon" src="/assets/front/assets/img/gf.png" width="7%">
+                                                                @endif
+                                                                @if($d->vegetarian)
+                                                                    <img class="addition-icon" src="/assets/front/assets/img/v.png" width="7%">
+                                                                @endif
+                                                                @if($d->vegan)
+                                                                    <img class="addition-icon" src="/assets/front/assets/img/veg.png" width="7%">
+                                                                @endif
                                                             </div>
                                                         </div>
                                                     @endforeach

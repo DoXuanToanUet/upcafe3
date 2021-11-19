@@ -46,12 +46,14 @@
                                     @csrf
                                     <div class="col-lg-9 col-12 review-table review-table-detail">
                                         <div class="full p-5">
-                                            @foreach($data as $d)
+                                            <?php $i=0; ?>
+                                            @foreach($data as $d) 
+                                                
                                                 <input type="hidden" value="{{$d['menu']['id']}}" name="id[]">
-                                                <div class="row mt-5">
+                                                <div class="row mt-5 ">
                                                     <div class="col-md-6">
                                                         <div class="main-box cart-page-title">
-                                                            <h3>{{$d['menu']['name']}}</h3>
+                                                            <h3 class="<?= ($i==0) ? 'review-main-item':'review-item';?>">{{$d['menu']['name']}}</h3>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2 user-group-img">
@@ -88,6 +90,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- 2nd -->
+                                                @if($d['menu']['content'])
                                                 <div class="row mt-4">
                                                     <div class="col-12">
                                                         <div class="review_ul">
@@ -95,7 +98,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                @endif
                                                 <hr>
+                                                <?php $i++;?>
                                             @endforeach
                                         </div>
 

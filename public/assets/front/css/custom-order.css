@@ -39,9 +39,10 @@
     font-weight: 400 !important; 
 }
 .food-section .card-header h4,.option3-section .full .head h4{
-    font-family: "coco";
-    font-weight: bold;
+    font-family: "CocoSharp";
+    font-weight: 400;
     text-transform: uppercase;
+    font-size: 28px;
 }
 .food-section .card-footer{
     padding: 0px !important;
@@ -143,9 +144,12 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 }
 .detail-page  .review-table input[type='text']{
     height: 60px;
-    border:1px solid #000;
+    border:2px solid #1B1A19;
     border-radius: 3px;
    
+}
+.detail-page  .review-table input[type='text']:focus{
+    border:2px solid #8EC39B;
 }
 .detail-page .review-table input[type='text']::placeholder {
     font-size: 16px;
@@ -181,7 +185,14 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     width: 65% !important;
     border-radius: 2px;
 }
+.review-page .btn.view-my-selection-button{
+    font-size: 20px;
+}
 .btn.view-my-selection-button{
+    font-size: 16px;
+}
+.price-span{
+    color:#8EC39B !important;
     font-size: 20px;
 }
 .btn.btn-add-more:hover{
@@ -228,7 +239,7 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     line-height: 32px;
 }
 .review-table-detail .full{
-    padding: 40px !important;
+    padding: 40px 40px 60px !important;
 }
 .border-custom{
     border: 3px solid #8EC39B !important;
@@ -239,6 +250,64 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 }
 .border-background{
     background: rgba(142, 195, 155, 0.2);
+}
+.main-page .button-section ul li a,.main-page .button-section .show{
+    padding: 8px 32px !important;
+    color:  #8EC39B;
+    font-size: 17px;
+    display: block;
+    height: auto;
+    text-align: center;
+    height: 45px;
+    line-height: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    min-width: 120px !important;
+}
+.main-page .button-section ul li{
+    position: relative;
+
+}
+.main-page .button-section ul li:not(:first-child){
+    margin-left: 45px;
+}
+.main-page .button-section ul li span::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    right: -80px;
+    background: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.food-section .left-gray,.food-section .left-white{
+    height: 100%;
+}
+.island-container small,.high-tea-container small{
+    font-size: 16px;
+}
+.food-section .card-header .selection input[type=radio]:after{
+    width:30px;
+    height: 30px;
+}
+.island-container .card{
+    min-height: 300px;
+}
+.addition-icon{
+    margin-left: 10px;
+}
+.review-table-detail  hr:last-of-type{
+    display: none;
+}
+/* .review-table-detail .review-main-item{
+    font-size: 12px !important;
+} */
+.review-table-detail .review-item{
+    font-size: 20px !important;
+    text-transform: unset !important;
 }
 @media (max-width:575px){
     .food-section .left-gray{

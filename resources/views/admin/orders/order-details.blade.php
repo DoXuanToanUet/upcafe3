@@ -195,6 +195,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         $(document).ready(function () {
+            console.log("time ");
             const $body = $('body');
             $body.on('click', '.view-details', function () {
                 $.ajax({
