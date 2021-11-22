@@ -206,6 +206,7 @@
                         $body.LoadingOverlay('show');
                     },
                     success: function (data) {
+                        console.log(data);
                         $('#order-id').text(data.order_id);
                         $('#order-time').text(data.order_time);
                         $('#customer-name').text(data.name);

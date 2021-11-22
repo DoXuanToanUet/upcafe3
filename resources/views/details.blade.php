@@ -194,6 +194,7 @@
                             @csrf
                             <input type="hidden" value="1" name="type">
                             <input type="hidden" name="date" class="selected-date">
+                            <input type="hidden" name="detail-method" >
                             <div class="col-lg-4 col-12 review-table">
                                 <div class="full p-4 pb-4 full why-just min-heigh">
                                     <h4 class="text-center pb-3">We just need a few more
@@ -296,19 +297,20 @@
 
         $body.on('click', '.delivery-button', function (event) {
             event.preventDefault();
-
+    
             $(this).removeClass('bg-light-gray').addClass('bg-full-black');
             $('.pickup-button').removeClass('bg-full-black').addClass('bg-light-gray');
             $('input[name="type"]').val(0);
             $('.delivery-address').removeClass('d-none');
             $('.pickup-address').addClass('d-none');
+            $('input[name="detail-method"').val('delivery');
 
             $('.delivery-address input:not(#address2)').prop('required', true);
         });
 
         $body.on('click', '.pickup-button', function (event) {
             event.preventDefault();
-
+            $('input[name="detail-method"').val('pickup');
             $(this).removeClass('bg-light-gray').addClass('bg-full-black');
             $('.delivery-button').removeClass('bg-full-black').addClass('bg-light-gray');
             $('input[name="type"]').val(1);

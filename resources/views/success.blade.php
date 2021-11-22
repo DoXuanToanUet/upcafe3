@@ -17,8 +17,8 @@
 
         <div class="be-content" style="background-color: white">
             <div class="main-content success-page">
-                <div class="confirm-section py-4">
-                        <div class="container">
+                <div class="confirm-section py-4 success-page-container">
+                        <div class="container-fluid ">
                             <div class="title mt-4">
                                 <h2 class=" p-2">Thanks for placing your order!</h2>
                                 <div class="para">
@@ -28,7 +28,7 @@
 
 
 
-                            <div class="row mt-5">
+                            <div class="row mt-5 mr-6   ">
                                 <div class="col-md-9 review-table mb-4">
                                     <div class="full order-details-done table-responsive p-3">
                                         <table class="table table-bordered table-hover">
@@ -68,24 +68,25 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3 review-table">
+                                <div class="col-md-3 review-table review-detail-contact">
                                     <div class="full order-details-done table-responsive p-3">
 
                                         <div class="time">
-                                            <h3 class="fw-bold mb-4">Contact Information</h3>
-                                            <h4 class="mt-1" style="font-weight: bold;">Email - {{ $site->email }}</h4>
-                                            <h4 class="mt-1" style="font-weight: bold;">Call- {{ $site->contact }}</h4>
-                                            <h4 class="mt-1 mb-4" style="font-weight: bold;">{{$site->address}}</h4>
+                                            <h3 class="fw-bold mb-4 order-detail-title" >PICKUP</h3>
+                                            {{-- <h4 class="mt-1" style="font-weight: bold;">Email - {{ $site->email }}</h4>
+                                            <h4 class="mt-1" style="font-weight: bold;">Call- {{ $site->contact }}</h4> --}}
+                                            <h4 class="mb-4 order-detail-desc"><p style="font-weight: bold; ">The Upcafe </p>{{$site->address}}</h4>
 
-                                            <a class="btn btn-dark mt-1" href="#" role="button">CONTACT US</a>
+                                            {{-- <a class="btn btn-dark mt-1" href="#" role="button">CONTACT US</a> --}}
                                         </div>
-                                        <hr>
+                                        {{-- <hr> --}}
                                         <div class="or-contact-us text-center ">
-                                            <h5>Want to order more?</h5>
-                                            <a href="{{ url('/') }}" class="btn btn-success mt-3" style="background-color: #8EC39B;font-weight: bold; border: none;">PLACE NEW ORDER</a>
+                                            {{-- <h5>Want to order more?</h5> --}}
+                                            
                                         </div>
 
                                     </div>
+                                    <a href="{{ url('/') }}" class="btn btn-success mt-5 backtotheCafe" style="background-color: #8EC39B;font-weight: bold; border: none;">BACK TO THE CAFE</a>
                                 </div>
                             </div>
 

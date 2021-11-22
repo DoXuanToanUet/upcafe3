@@ -309,6 +309,37 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     font-size: 20px !important;
     text-transform: unset !important;
 }
+/* Thank for order page css */
+.success-page{
+    margin-top: 50px;
+}
+.review-detail-contact .order-details-done{
+    padding: 30px 40px !important;
+}
+.success-page-container{
+    padding-left: 38px;
+}
+.order-detail-title{
+    position: absolute;
+    background-color: #1B1A19;
+    left: 15px;
+    top: 30px;
+    color: #fff;
+    padding: 20px 40px;
+}
+.order-detail-desc{
+    margin-top: 110px;
+}
+.btn.backtotheCafe{
+    padding: 20px 40px;
+    display: table;
+    margin: 0px auto;
+    transition: all 0.3s ease;
+}
+.btn.backtotheCafe:hover{
+    background-color: #7eaf8a !important;
+}
+
 @media (max-width:575px){
     .food-section .left-gray{
         height: unset;
