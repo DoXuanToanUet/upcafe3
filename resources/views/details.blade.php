@@ -229,7 +229,6 @@
 
                                     </div>
                                     </div>
-
                                     <input type="text" class="form-control datetimepicker-input"  id="datetimepicker1" name="date">
                                 </div>
                             </div>
@@ -237,33 +236,44 @@
                                 <div class="stranges p-3">
 {{--                                    <h5 class="mt-5 mb-3 ml-2">Expected time </h5>--}}
                                     <div class="container delivery-address d-none">
-                                        <h5 class="mt-5">DELIVER TO</h5>
+                                        <h5 class="mt-5" style="padding-bottom:30px;">Expected time of delivery</h5>
+                                        <div class="delivery-show-time">
+                                            <p></p>
+                                        </div>
                                         <div class="caridt">
                                             <div>
                                                 <input type="text" name="street" id="ship-address" class="form-control"
-                                                       autocomplete="off">
+                                                       autocomplete="off" placeholder="Street">
                                             </div>
                                         </div>
                                         <div class="caridt">
                                             <div class="mt-1">
                                                 <input type="text" name="apartment" id="address2" class="form-control"
-                                                       placeholder="Apartment, unit, suite, or floor #">
+                                                       placeholder="Level/Apt">
                                             </div>
-                                            <div class="mt-1">
+                                            <!-- <div class="mt-1">
                                                 <input type="text" name="city" id="locality" class="form-control"
                                                        placeholder="City">
-                                            </div>
-                                            <div class="mt-1">
+                                            </div> -->
+                                            <div class="mt-1" style="display:flex">
                                                 <input type="text" name="code" id="postcode" class="form-control"
-                                                       placeholder="Postal code">
+                                                       placeholder="Postal code" style="flex:1">
+                                                <div style="flex:1; border:2px solid #000; color:#1b1a19; display:flex;align-items: center;justify-content:center;height:60px;font-size:20px;margin-left:10px;">Auckland</div>
                                             </div>
+                                            <p class="delivery-text">Delivery fee applies.</p>
+                                            <p class="delivery-sub-text">No credit card required just yet.</p>
                                         </div>
                                     </div>
                                     <div class="container pickup-address">
-                                        <h5 class="mt-5">PICKUP FROM</h5>
+                                        <h5 class="mt-5" style="padding-bottom:30px;">Expected pickup time</h5>
+                                        <div class="delivery-show-time">
+                                            
+                                        </div>
                                         <div class="caridt">
+                                            <p>PICKUP FROM</p>
+                                            <p style="font-weight:700">Up Cafe</p>
                                             <p class=""
-                                               style="margin-top: 20px; padding-bottom: 15px;">{{$site->address}}</p>
+                                               style="margin-top: 20px; padding-bottom: 15px; max-width:80%">{{$site->address}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -294,10 +304,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const $body = $('body');
-
+      
         $body.on('click', '.delivery-button', function (event) {
             event.preventDefault();
-    
+            
             $(this).removeClass('bg-light-gray').addClass('bg-full-black');
             $('.pickup-button').removeClass('bg-full-black').addClass('bg-light-gray');
             $('input[name="type"]').val(0);
@@ -327,10 +337,12 @@
                 step: 15,
                 hours12:true,
                 yearStart: 2021,
-                yearEnd: 2022,
+                yearEnd: 2099,
                 next:'xdsoft_next',
                 prev :'xdsoft_prev',
-
+                onChangeDateTime:function(dp,$input){
+                   $('.delivery-show-time').text($input.val())
+                },
                 inline: true
             });
         });

@@ -339,7 +339,53 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 .btn.backtotheCafe:hover{
     background-color: #7eaf8a !important;
 }
-
+.delivery-address input{
+    margin-bottom: 15px !important;
+}
+.delivery-text{
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: 700;
+}
+.delivery-sub-text{
+    font-size: 18px;
+}
+.delivery-show-time{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+.pickup-address p{
+    font-size: 24px;
+    line-height: 38px;
+}
+.xdsoft_datepicker.active{
+    width: calc(100% - 100px) !important;
+}
+.xdsoft_datetimepicker{
+    width: 100% !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
+    border: 0px !important;
+    font-size: 18px !important;
+    text-align: center !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current{
+    background-color: #8EC39B  !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+    font-family: "Roboto" !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td:hover{
+    border-radius: 50% !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar th{
+    background: #fff !important;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div{
+    font-size: 14px  !important;
+}
 @media (max-width:575px){
     .food-section .left-gray{
         height: unset;

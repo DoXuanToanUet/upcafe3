@@ -241,6 +241,7 @@
             $body.on('change', '.breakfast', function () {
                 $('.breakfast-buffet, .setup-buffet-radio').prop('checked', false);
                 $('.breakfast-buffet').closest('.card').find('.setup').hide();
+               
             });
             $body.on('change', '.breakfast-buffet', function () {
                 $('.breakfast').prop('checked', false);
@@ -254,6 +255,38 @@
                     $('.view-my-selection-button').prop('disabled', true);
                 }
             });
+            count=0;
+            // $body.on('change', '.breakfast-buffet', function () {
+            //     $('.breakfast').prop('checked', false);
+            // });
+            // $body.on('change', '.form-check-input', function () {
+            
+            //     if ($(this).is(':checked')) {
+            //         count++;
+            //         console.log(count);
+            //     } else{
+            //         count--;
+            //         console.log(count);
+            //     }
+            // })
+            $body.on('change', '.breakfast', function () {
+
+                if ($(this).is(':checked')) {
+                   count=1;
+                   console.log(count);
+                   localStorage.setItem("countItem", count);
+                } 
+            })
+            $body.on('change', '.breakfast-buffet', function () {
+                count=0
+                if ($(this).is(':checked')) {
+                    count++;
+                    console.log(count);
+                    localStorage.setItem("countItem", count);
+                } else{
+                    count=0;
+                }
+            })
            
         });
     </script>

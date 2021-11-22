@@ -285,47 +285,15 @@ $(document).on('click', '.xmas-themed', function () {
     }
 })
 
-
-// 
-// 
-// $('.breakfast-page .form-check-input').each(function(){
-    
-//     $(this).on("click", function(){
-//         $(this).closest('.card').removeClass('border-custom');
-//         console.log("input checkbox");
-//         if ($('.form-check-input:checked')) {
-//             $(this).closest('.card').toggleClass('border-custom');
-//         }
-     
-//     })
-// })
-// $(document).on('change', '.breakfast-page .full-buffet .form-check-input', function () {
-//     $(this).closest('.card').toggleClass('border-custom');
-// //    console.log("buffet");
-// });
-
-// $(document).on('change', '.check-additional', function () {
-//     console.log(1);
-//     var count = 0;
-//     if($(this).is(':checked')) {
-//         $('#additional-breakfast').val(1);
-//     }
-
-//     $('.check-additional').each(function( index ) {
-//         if($(this).is(':checked')) {
-//             count = count + 1;
-//         }
-//     });
-
-//     if(count > 0 ) {
-//         $('#additional-breakfast').val(1);
-//     } else {
-//         $('#additional-breakfast').val(0);
-//     }
-// });
-
-//     $('.check-additional').each(function( index ) {
-//         if($(this).is(':checked')) {
-//             count = count + 1;
-//         }
-//     });
+// Add event click show check item 
+$(function () {
+    // showTime = $('#datetimepicker1').val();
+    // console.log(showTime);
+    // if(showTime){
+    //     $('.delivery-show-time').append(`<p>${showTime}</p>`);
+    // }
+    // var d = $('#datetimepicker1').datetimepicker('getDate');
+    // console.log(d);
+    // $('#delivery-show-time').append(d);
+   
+})
