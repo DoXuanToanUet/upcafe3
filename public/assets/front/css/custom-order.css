@@ -144,12 +144,12 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 }
 .detail-page  .review-table input[type='text']{
     height: 60px;
-    border:2px solid #1B1A19;
+    border:1px solid #1B1A19;
     border-radius: 3px;
    
 }
 .detail-page  .review-table input[type='text']:focus{
-    border:2px solid #8EC39B;
+    border:1px solid #8EC39B;
 }
 .detail-page .review-table input[type='text']::placeholder {
     font-size: 16px;
@@ -385,6 +385,32 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 }
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div{
     font-size: 14px  !important;
+}
+@media screen and (max-width:991px) {
+    .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
+      display: none;
+    }
+    .review-page .be-content ,.detail-page  .be-content,.success-page .be-content{
+        margin-left: 0px;
+    }
+    .review-page  .review-table-detail{
+        padding-right: 15px !important;
+    }
+    .delivery-section{
+        padding: 30px 0px;
+    }
+    .success-page-container{
+        padding-left: 0px;
+    }
+    .island-container div,.graze-container div,.funeral-container div,
+    .high-tea-container div,.platters-container div,.xmas-themed-container div{
+        max-width: 100%;
+        flex: 100% !important;
+    }
+    .detail-page .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box{
+        width: 50px;
+        height: 225px;
+    }
 }
 @media (max-width:575px){
     .food-section .left-gray{

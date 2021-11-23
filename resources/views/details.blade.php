@@ -258,7 +258,7 @@
                                             <div class="mt-1" style="display:flex">
                                                 <input type="text" name="code" id="postcode" class="form-control"
                                                        placeholder="Postal code" style="flex:1">
-                                                <div style="flex:1; border:2px solid #000; color:#1b1a19; display:flex;align-items: center;justify-content:center;height:60px;font-size:20px;margin-left:10px;">Auckland</div>
+                                                <div style="flex:1; border:1px solid #000; color:#1b1a19; display:flex;align-items: center;justify-content:center;height:60px;font-size:20px;margin-left:10px;">Auckland</div>
                                             </div>
                                             <p class="delivery-text">Delivery fee applies.</p>
                                             <p class="delivery-sub-text">No credit card required just yet.</p>

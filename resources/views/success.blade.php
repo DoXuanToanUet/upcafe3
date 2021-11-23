@@ -2,7 +2,7 @@
 @section('title', 'Details')
 @section('content')
 
-    <div class="be-wrapper be-fixed-sidebar " style="background-color: white" >
+    <div class="be-wrapper be-fixed-sidebar success-page " style="background-color: white" >
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
 
         <div class="be-left-sidebar">
@@ -28,8 +28,9 @@
 
 
 
-                            <div class="row mt-5 mr-6   ">
-                                <div class="col-md-9 review-table mb-4">
+                            <div class="row mt-5 mr-6  containe
+                             ">
+                                <div class="col-lg-9 col-md-12 review-table mb-4">
                                     <div class="full order-details-done table-responsive p-3">
                                         <table class="table table-bordered table-hover">
                                             <thead>
@@ -67,8 +68,8 @@
                                         </table>
                                     </div>
                                 </div>
-
-                                <div class="col-md-3 review-table review-detail-contact">
+                               
+                                <div class="col-lg-3 col-md-12 review-table review-detail-contact">
                                     <div class="full order-details-done table-responsive p-3">
 
                                         <div class="time">
@@ -88,14 +89,8 @@
                                     </div>
                                     <a href="{{ url('/') }}" class="btn btn-success mt-5 backtotheCafe" style="background-color: #8EC39B;font-weight: bold; border: none;">BACK TO THE CAFE</a>
                                 </div>
+                                
                             </div>
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>

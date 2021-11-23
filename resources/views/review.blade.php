@@ -64,7 +64,7 @@
 
                                                         @endif
                                                     </div>
-                                                    <div class="col-md-2 user-group-img">
+                                                    <div class="col-md-3 user-group-img">
                                                         @if($d['menu']['group'])
                                                             <div class="number">
                                                                 <span class="minus">-</span>
@@ -78,7 +78,7 @@
                                                                    data-limit="1">
                                                         @endif
                                                     </div>
-                                                    <div class="col-md-2 user-group-img">
+                                                    <div class="col-md-1 user-group-img">
                                                         <div class="text-center">
                                                             <?php
                                                             $deleteId = $d['menu']['id'];

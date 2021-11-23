@@ -255,39 +255,18 @@
                     $('.view-my-selection-button').prop('disabled', true);
                 }
             });
-            count=0;
-            // $body.on('change', '.breakfast-buffet', function () {
-            //     $('.breakfast').prop('checked', false);
-            // });
-            // $body.on('change', '.form-check-input', function () {
-            
-            //     if ($(this).is(':checked')) {
-            //         count++;
-            //         console.log(count);
-            //     } else{
-            //         count--;
-            //         console.log(count);
-            //     }
-            // })
-            $body.on('change', '.breakfast', function () {
-
-                if ($(this).is(':checked')) {
-                   count=1;
-                   console.log(count);
-                   localStorage.setItem("countItem", count);
-                } 
-            })
-            $body.on('change', '.breakfast-buffet', function () {
-                count=0
-                if ($(this).is(':checked')) {
-                    count++;
-                    console.log(count);
-                    localStorage.setItem("countItem", count);
-                } else{
-                    count=0;
+            $body.on('change','.form-check-input',function(){
+                if($(this).is(":checked")) {
+                    let count = localStorage.getItem('countCheck');
+                    count = parseInt(count);
+                    localStorage.setItem('countCheck',count+1)
+                    $('.quantity-count').text(count);
+                }else{
+                    localStorage.setItem('countCheck',count-1)
+                    $('.quantity-count').text(count);
                 }
             })
-           
+          
         });
     </script>
 @endsection

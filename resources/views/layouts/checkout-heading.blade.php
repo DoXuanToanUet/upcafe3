@@ -49,7 +49,7 @@
                         //     $count = $cart['total'];
                         // }
                     ?>
-                    {{-- <span class="quantity-count">{{ $count }}</span> --}}
+                    <span class="quantity-count"></span>
                     {{-- <p>v</p> --}}
                 </li>
             </ul>

@@ -16,13 +16,13 @@
                     <div class="food-section">
                         <div class="container-fluid">
                             <div class="row d-flex flex-wrap align-items-end">
-                                <div class="col-lg-8 col-md-8 col-12 row">
+                                <div class="col-lg-8 col-md-12 col-12 row">
                                     @if(isset($data) && isset($data['main-options']) && count($data['main-options']) > 0)
                                         <?php
                                             $count = count($data['main-options']) / 2;
                                             $exact = count($data['main-options']);
                                         ?>
-                                        <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="col-lg-6 col-md-12 col-12">
                                             @for($i=0;$i<$count;$i++)
                                                 <div class="option3-section">
                                                     <div class="row marign-top-44">
@@ -63,7 +63,7 @@
                                                 </div>
                                             @endfor
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="col-lg-6 col-md-12 col-12">
                                             @for($i=$count;$i<$exact;$i++)
                                                 <div class="option3-section">
                                                     <div class="row marign-top-44">
@@ -111,7 +111,7 @@
 
                                 </div>
                                 @if(isset($data) && isset($data['beverage']) && count($data['beverage']) > 0)
-                                    <div class="col-lg-4 col-md-4 col-12 option3-section">
+                                    <div class="col-lg-4 col-md-12 col-12 option3-section">
                                         <div class="row  marign-top-44">
                                             <div class="col-12">
                                                 <div class="additional-section">
@@ -153,7 +153,7 @@
                                     </div>
                                 @endif
 
-                                <div class="col-lg-8 col-md-8 col-12 row">
+                                <div class="col-lg-8 col-md-12 col-12 row">
                                     <div class="main-selction-4  pb-5 mt-6">
                                         <div class="view-my-selection m-auto text-center  pb-5">
                                             <button type="button" class="btn btn-success main-option arrow-button-white w-100">ADDITIONAL OPTIONS</button>
@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-12 row">
+                                <div class="col-lg-4 col-md-12 col-12 row">
                                     <div class="main-selction-4  pb-5 mt-6">
                                     <div class="button text-center ">
                                         <button type="submit" class="btn btn-outline-success view-my-selection-button" disabled> VIEW MY SELECTION</button>
