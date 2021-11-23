@@ -12,10 +12,10 @@
     <?php
     $is_active = 'review';
     ?>
-
+    {{-- {{dd($data)}}; --}}
     <div class="be-wrapper be-fixed-sidebar be-fixed-sidebar123 review-page" style="background-color: white;">
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
-
+       
         <div class="be-left-sidebar">
             <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" href="#">Dashboard</a>
                 <div class="left-sidebar-spacer">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-
+     
         @if($data)
             <div class="be-content">
                 <div class="main-content">
@@ -53,7 +53,10 @@
                                                 <div class="row mt-5 ">
                                                     <div class="col-md-6">
                                                         <div class="main-box cart-page-title">
-                                                            <h3 class="<?= ($i==0) ? 'review-main-item':'review-item';?>">{{$d['menu']['name']}}</h3>
+                                                            <h3 class="<?= ($i==0) ? 'review-main-item':'review-item';?>">
+                                                                {{$d['menu']['name']}}
+                                                            </h3>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2 user-group-img">
@@ -95,6 +98,16 @@
                                                     <div class="col-12">
                                                         <div class="review_ul">
                                                             {!! $d['menu']['content'] !!}
+                                                            <?php 
+                                                                $itemGrandparent = $d['menu']['grandparent'];
+                                                                $itemParent = $d['menu']['parent'];
+                                                                $itemId =  $d['menu']['id'];
+                                                            ?>
+                                                            @if ($itemGrandparent === 'breakfast' && $itemParent === 1 || $itemGrandparent === 'lunch' || $itemGrandparent === 'tea' || $itemGrandparent === 'more' &&  $itemId === 157 ||  $itemGrandparent === 'more' &&  $itemId === 168 ||  $itemGrandparent === 'more' &&  $itemId === 169 || $itemGrandparent === 'more' &&  $itemId === 190 || $itemGrandparent === 'more' &&  $itemId === 192 || $itemGrandparent === 'more' &&  $itemId === 193 ||$itemGrandparent === 'more' &&  $itemId === 194    )
+                                                                <p>Individual Packaging (pricing on request) </p>
+                                                            @elseif ($itemGrandparent === 'breakfast' && $itemParent === 2 || $itemGrandparent === 'dinner' || $itemGrandparent === 'more' &&  $itemId ===156 )
+                                                                <p>Full Buffet off-site setup (pricing on request) </p>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>

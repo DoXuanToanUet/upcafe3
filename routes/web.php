@@ -63,7 +63,7 @@ Route::get('/detail-delivery', [App\Http\Controllers\HomeController::class, 'det
 Route::post('/details', [App\Http\Controllers\HomeController::class, 'detailsPost']);
 Route::post('/delete-menu', [App\Http\Controllers\HomeController::class, 'deleteMenu']);
 Route::post('/edit-menu', [App\Http\Controllers\HomeController::class, 'editMenu']);
-Route::get('/success', [App\Http\Controllers\HomeController::class, 'success']);
+Route::get('/{id}/success', [App\Http\Controllers\HomeController::class, 'success']);
 
 Route::get('/catering/breakfast', [App\Http\Controllers\HomeController::class, 'breakfast']);
 Route::get('/catering/tea', [App\Http\Controllers\HomeController::class, 'tea']);

@@ -420,7 +420,7 @@ class HomeController extends Controller
             $admin = Site::first();
             Mail::to($admin->email)->send(new OrderEmail($data));
 
-            return response()->json('success');
+            return response()->json(['status' =>'success', 'order' => $order->id]);
         } catch (\Exception $e) {
             dump($e->getMessage());
             dump($e->getTraceAsString());
@@ -428,11 +428,16 @@ class HomeController extends Controller
         }
     }
 
-    public function success(){
+    public function success(Request $request){
+        // dd($request->id);
         $data = Session::get('catering');
         Session::forget('catering');
+        $order = Order::find($request->id);
+        if(!$order) {
+            abort(404);
+        }
         $currentPage = 'success';
-        return view('success', compact('data', 'currentPage'));
+        return view('success', compact('data', 'order', 'currentPage'));
     }
 
     public function contact(Request $request){

@@ -28,9 +28,9 @@
 
 
 
-                            <div class="row mt-5 mr-6  containe
+                            <div class="row mt-5 mr-6   container-success
                              ">
-                                <div class="col-lg-9 col-md-12 review-table mb-4">
+                                <div class="col-lg-9 col-md-12 col-12 review-table mb-4">
                                     <div class="full order-details-done table-responsive p-3">
                                         <table class="table table-bordered table-hover">
                                             <thead>
@@ -68,28 +68,57 @@
                                         </table>
                                     </div>
                                 </div>
-                               
-                                <div class="col-lg-3 col-md-12 review-table review-detail-contact">
-                                    <div class="full order-details-done table-responsive p-3">
-
-                                        <div class="time">
-                                            <h3 class="fw-bold mb-4 order-detail-title" >PICKUP</h3>
-                                            {{-- <h4 class="mt-1" style="font-weight: bold;">Email - {{ $site->email }}</h4>
-                                            <h4 class="mt-1" style="font-weight: bold;">Call- {{ $site->contact }}</h4> --}}
-                                            <h4 class="mb-4 order-detail-desc"><p style="font-weight: bold; ">The Upcafe </p>{{$site->address}}</h4>
-
-                                            {{-- <a class="btn btn-dark mt-1" href="#" role="button">CONTACT US</a> --}}
-                                        </div>
-                                        {{-- <hr> --}}
-                                        <div class="or-contact-us text-center ">
-                                            {{-- <h5>Want to order more?</h5> --}}
-                                            
-                                        </div>
-
-                                    </div>
-                                    <a href="{{ url('/') }}" class="btn btn-success mt-5 backtotheCafe" style="background-color: #8EC39B;font-weight: bold; border: none;">BACK TO THE CAFE</a>
-                                </div>
                                 
+                                @if($order->order_type === 'pick up')
+                                    <div class="col-lg-3 col-md-12 col-12 review-table review-detail-contact">
+                                        <div class="full order-details-done table-responsive p-3">
+
+                                            <div class="time">
+                                                <h3 class="fw-bold mb-4 order-detail-title" >PICKUP</h3>
+                                                {{-- <h4 class="mt-1" style="font-weight: bold;">Email - {{ $site->email }}</h4>
+                                                <h4 class="mt-1" style="font-weight: bold;">Call- {{ $site->contact }}</h4> --}}
+                                                <h4 class="mb-4 order-detail-desc"><p style="font-weight: bold; ">The Upcafe </p>{{$site->address}}</h4>
+
+                                                {{-- <a class="btn btn-dark mt-1" href="#" role="button">CONTACT US</a> --}}
+                                            </div>
+                                            {{-- <hr> --}}
+                                            <div class="or-contact-us text-center ">
+                                                {{-- <h5>Want to order more?</h5> --}}
+                                                
+                                            </div>
+
+                                        </div>
+                                        <a href="{{ url('/') }}" class="btn btn-success mt-5 backtotheCafe" style="background-color: #8EC39B;font-weight: bold; border: none;">BACK TO THE CAFE</a>
+                                    </div>
+                                @endif
+
+
+                                @if($order->order_type === 'delivery')
+                                    <div class="col-lg-3 col-md-12 col-12 review-table review-detail-contact">
+                                        <div class="full order-details-done table-responsive p-3">
+
+                                            <div class="time">
+                                                <h3 class="fw-bold mb-4 order-detail-title" >DELIVERY</h3>
+                                                 <!-- <h4 class="mt-1" style="font-weight: bold;">Email - {{ $order->email }}</h4> -->
+                                                <!-- <h4 class="mt-1" style="font-weight: bold;">Call- {{ $order->contact }}</h4> -->
+                                                <div class="mb-4 order-detail-desc">
+                                                    <p class="delivery-infomation">{{$order->street}}</p>
+                                                    <p class="delivery-infomation">{{$order->apartment}}</p>
+                                                    <p class="delivery-infomation">Auckland {{$order->postal_code}}</p>
+                                                </div>
+
+                
+                                            </div>
+                                            <!-- {{-- <hr> --}}
+                                            <div class="or-contact-us text-center ">
+                                                {{-- <h5>Want to order more?</h5> --}}
+                                                
+                                            </div> -->
+
+                                        </div>
+                                        <a href="{{ url('/') }}" class="btn btn-success mt-5 backtotheCafe" style="background-color: #8EC39B;font-weight: bold; border: none;">BACK TO THE CAFE</a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -137,4 +166,5 @@
         border-right: none;
     }
 </style>
+
 @endsection

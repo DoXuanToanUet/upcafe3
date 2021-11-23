@@ -90,9 +90,31 @@ $(document).on("submit", '#menu', function(event){
         },
     });
 });
+//========= Check validate  ============
 
+// Check email confirm
+ function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Check phonenumber confirm
+function isphonenumber(phonenumber) {
+    var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+    if(phonenumber.match(phoneno)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 $(document).on("submit", '#details', function(event){
-    event.preventDefault()
+    event.preventDefault();
+    // console.log("email");
+    // contact =$('input[name="contact"]').val();
+    // if(contact !=''){
+    //     console.log("contact");
+    // }
     $.ajax({
         type: "POST",
         url: '/details',
@@ -109,8 +131,8 @@ $(document).on("submit", '#details', function(event){
             clearError();
             console.log(data);
             swal("Oops...", "An error occurred. Pleas try again.", "success");
-            if(data=='success'){
-                location.href = '/success';
+            if(data.status === 'success'){
+                location.href = `${data.order}/success`;
             } else {
                 displayError(data);
             }
@@ -170,33 +192,6 @@ $(document).on("submit", '#editMenu', function(event){
         },
     });
 });
-
-// $(document).on('click', '.form-check-input', function () {
-//     $('.option3-section .full-custom').removeClass('border-custom');
-//     if ($('.form-check-input:checked')) {
-
-//         $(this).closest('.option3-section .full-custom').toggleClass('border-custom');
-//         // $(this).closest('.card').css('border','2px solid #8EC39B');
-//         // $(this).closest('.option3-section').css('border','2px solid #8EC39B');
-//         // console.log($(this));
-//     } else{
-//         // $(this).closest('.option3-section .full-custom').css('border','0px');
-//     }
-// });
-
-// $('.breakfast-page').on('click', '.form-check-input', function () {
-//    console.log("object");
-//     $(this).closest('.card').removeClass('border-custom');
-//     if ($('.form-check-input:checked')) {
-//         $(this).closest('.card').toggleClass('border-custom');
-//         // $(this).closest('.card').css('border','2px solid #8EC39B');
-//         // $(this).closest('.option3-section').css('border','2px solid #8EC39B');
-//         // console.log($(this));
-//     } else{
-//         // $(this).closest('.option3-section .full-custom').css('border','0px');
-//     }
-// });
-
 
 // Breakfast Js event check border
 $(document).on('click', '.check-breakfast', function () {

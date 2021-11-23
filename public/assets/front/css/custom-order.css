@@ -374,17 +374,24 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current{
     background-color: #8EC39B  !important;
     box-shadow: none !important;
-    border-radius: 50% !important;
+    /* border-radius: 50% !important; */
     font-family: "Roboto" !important;
 }
 .xdsoft_datetimepicker .xdsoft_calendar td:hover{
-    border-radius: 50% !important;
+    /* border-radius: 50% !important; */
 }
 .xdsoft_datetimepicker .xdsoft_calendar th{
     background: #fff !important;
 }
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div{
     font-size: 14px  !important;
+}
+.delivery-infomation{
+    font-size: 18px;
+    line-height: 32px;
+}
+.timing-banner.contect_part1 h2{
+    font-family: "CocoSharp";
 }
 @media screen and (max-width:991px) {
     .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
@@ -413,6 +420,7 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     }
 }
 @media (max-width:575px){
+   
     .food-section .left-gray{
         height: unset;
     }
@@ -437,5 +445,25 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     }
     .footer-social-icon{
         margin-bottom: 20px;
+    }
+    .review-page .review-table-detail .full{
+        padding:10px !important;
+    }
+    .review-table .why-just{
+        padding: 30px 15px !important;
+        min-height: auto !important;
+    }
+    .delivery-address{
+        padding: 0px !important;
+    }
+    .success-page{
+        margin-top: 0px;
+    }
+    .success-page .container-success{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .promise_content{
+        margin-top: 40px;
     }
 }
