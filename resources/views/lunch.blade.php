@@ -29,11 +29,11 @@
                                                         <div class="col-12">
                                                             <div class="full full-custom">
                                                                 <div class="head " style="background-color: #F4F4F4; border: none;">
-                                                                    <div class="row">
-                                                                        <div class="col">
+                                                                    <div class="justify-content-between d-flex">
+                                                                        <div class="">
                                                                             <h4>{{$data['main-options'][$i]['name']}}</h4>
                                                                         </div>
-                                                                        <div class="col">
+                                                                        <div class="">
                                                                             <div class="box3 float-right">
                                                                                 <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options">
                                                                             </div>
@@ -70,11 +70,11 @@
                                                         <div class="col-12">
                                                             <div class="full full-custom">
                                                                 <div class="head " style="background-color: #F4F4F4; border: none;">
-                                                                    <div class="row">
-                                                                        <div class="col">
+                                                                    <div class="justify-content-between d-flex">
+                                                                        <div class="">
                                                                             <h4>{{$data['main-options'][$i]['name']}}</h4>
                                                                         </div>
-                                                                        <div class="col">
+                                                                        <div class="">
                                                                             <div class="box3 float-right">
                                                                                 <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                             </div>

@@ -196,20 +196,20 @@
                             <input type="hidden" name="date" class="selected-date">
                             <input type="hidden" name="detail-method" >
                             <div class="col-lg-4 col-12 review-table">
-                                <div class="full p-4 pb-4 full why-just min-heigh">
+                                <div class="full p-4 pb-4 full why-just min-heigh ">
                                     <h4 class="text-center pb-3">We just need a few more
                                         details.</h4>
                                     <div class="input m-auto text-center">
-                                        <input type="text" class="form-control mx-auto" placeholder="Name" name="name" required>
-                                         {{-- <p class="error-mess">Tin nhan loi</p> --}}
+                                        <input type="text" class="form-control mx-auto fcommon" placeholder="Name" name="name" required>
+                                         {{-- <p class="error-mess">Error message</p> --}}
                                     </div>
                                     <div class="input m-auto py-2 text-center">
-                                        <input type="number" class="form-control mx-auto" placeholder="Mobile Number" name="contact" required  >
-                                        {{-- <p class="error-mess">Tin nhan loi</p> --}}
+                                        <input type="number" class="form-control mx-auto fcommon" placeholder="Mobile Number" name="contact" required  >
+                                        {{-- <p class="error-mess">Error message<</p> --}}
                                     </div>
                                     <div class="input m-auto text-center">
-                                        <input type="email" class="form-control mx-auto" placeholder="Email" name="email" required>
-                                        {{-- <p class="error-mess ">Tin nhan loi</p>     --}}
+                                        <input type="email" class="form-control mx-auto fcommon" placeholder="Email" name="email" required>
+                                        {{-- <p class="error-mess ">Error message<</p>     --}}
                                 </div>
                                 <p class="note-info">Please note, all orders must be made 48-hours in advance of your event.</p> 
                             </div>

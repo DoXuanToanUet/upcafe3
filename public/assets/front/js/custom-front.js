@@ -90,76 +90,9 @@ $(document).on("submit", '#menu', function(event){
         },
     });
 });
-//========= Check validate Form  ============
 
-// Check email confirm
- function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-// Check phonenumber confirm
-function isphonenumber(phonenumber) {
-    var phoneno = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    if(phonenumber.match(phoneno)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-function setError(input, mess){
-    $(input).addClass("border-danger");
-    $(input).parent().find("p").addClass("text-danger").html(mess);
-
-}
-function setSuccess(input){
-    $(input).removeClass("border-danger").addClass('border-success');
-    $(input).parent().find("p").removeClass("text-danger");
-}
 $(document).on("submit", '#details', function(event){
     event.preventDefault();
-    // console.log("email");
-    Fcontact =$('input[name="contact"]').val();
-    Fname =$('input[name="name"]').val();
-    Femail =$('input[name="email"]').val();
-   
-    if(Fname == "" &&  Fcontact == "" && Femail == "" ){
-        setError($('input[name="name"]'),'This field is required');
-        setError($('input[name="contact"]'),'This field is required');
-        setError($('input[name="email"]'),'This field is required');
-    }
-
-    if(Fname == ""){
-        setError($('input[name="name"]'),'The name not empty');
-        return false;
-    } 
-
-    if(Fname != "" ){
-        setSuccess($('input[name="name"]'));
-    }
-    if(Fcontact == ""){
-        setError($('input[name="contact"]'),'Phone number not be empty');
-        return false;
-    }
-
-    if( Fcontact !="" && isphonenumber(Fcontact) ){
-        setSuccess($('input[name="contact"]'));
-    } else if(Fcontact !="" && !isphonenumber(Fcontact) ){
-        setError($('input[name="contact"]'),'Invalid phone number');
-        return false;
-    }
-
-    if(Femail == ""){
-        setError($('input[name="email"]'),'The email not be empty');
-        return false;
-    }
-    if( Femail !="" && validateEmail(Femail) ){
-        setSuccess($('input[name="email"]'));
-    } else if(Femail !="" && !validateEmail(Femail) ){
-        setError($('input[name="email"]'),'Invalid email');
-        return false;
-    }
     $.ajax({
         type: "POST",
         url: '/details',
