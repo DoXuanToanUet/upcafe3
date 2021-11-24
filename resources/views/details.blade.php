@@ -200,19 +200,18 @@
                                     <h4 class="text-center pb-3">We just need a few more
                                         details.</h4>
                                     <div class="input m-auto text-center">
-                                        <input type="text" class="form-control mx-auto" placeholder="Name" name="name"
-                                               required>
+                                        <input type="text" class="form-control mx-auto" placeholder="Name" name="name" required>
+                                         {{-- <p class="error-mess">Tin nhan loi</p> --}}
                                     </div>
                                     <div class="input m-auto py-2 text-center">
-                                        <input type="text" class="form-control mx-auto" placeholder="Mobile Number"
-                                               name="contact" required>
+                                        <input type="number" class="form-control mx-auto" placeholder="Mobile Number" name="contact" required  >
+                                        {{-- <p class="error-mess">Tin nhan loi</p> --}}
                                     </div>
                                     <div class="input m-auto text-center">
-
-                                    <input type="text" class="form-control mx-auto" placeholder="Email" name="email"
-                                           required>
-                                      <p class="note-info">Please note, all orders must be made 48-hours in advance of your event.</p>     
+                                        <input type="email" class="form-control mx-auto" placeholder="Email" name="email" required>
+                                        {{-- <p class="error-mess ">Tin nhan loi</p>     --}}
                                 </div>
+                                <p class="note-info">Please note, all orders must be made 48-hours in advance of your event.</p> 
                             </div>
                     </div>
                     <div class="col-lg-8 col-12 all-ok delivery-pickup review-table ">

@@ -390,9 +390,26 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     font-size: 18px;
     line-height: 32px;
 }
-.timing-banner.contect_part1 h2{
+.timing-banner.contect_part1 h2,.dinner-cafe-section .all span,
+.dinner-cafe-section .full h3,.option3-section .full span{
     font-family: "CocoSharp";
 }
+/* .error-border{
+    border:1px solid red !important;
+} */
+.error-mess{
+    text-align: left;
+    padding: 5px 0px;
+    font-size: 15px;
+}
+.error-mess.text-danger{
+    display: block;
+    /* color: red; */
+}
+.error-mess{
+    display: none;
+}
+
 @media screen and (max-width:991px) {
     .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
       display: none;
@@ -418,9 +435,23 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
         width: 50px;
         height: 225px;
     }
+    .ourcafe_content h2{
+        font-size: 30px ;
+    }
+    .catering_title h2{
+        line-height: 70px;
+    }
+    .copyright-text{
+        padding-bottom: 40px;
+    }
 }
-@media (max-width:575px){
-   
+@media screen and (max-width:575px){
+    .ourcafe_content h2{
+        font-size: 20px ;
+    }
+    .catering_title h2{
+        line-height: 40px;
+    }
     .food-section .left-gray{
         height: unset;
     }
@@ -465,5 +496,19 @@ input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
     }
     .promise_content{
         margin-top: 40px;
+    }
+    .banner_overlay_content.boct h1{
+        font-size: 50px;
+    }
+    .single-cta{
+        display: flex;
+        align-items: center;
+    }
+    .cafe-page-order-button .order-now{
+        width: 80%;
+        margin: 30px auto 20px !important;
+    }
+    .cafe-page-order-button .order-now:last-child{
+        margin-top: 0px;
     }
 }

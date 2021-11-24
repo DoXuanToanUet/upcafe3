@@ -99,7 +99,10 @@ $notification_header = true; ?>
                     <div class="our-promise-flex">
                         <div class="item">
                             <div class=" wow slideInLeft">
-                                <img class="img" src="images/cafe.png" alt="">
+                                <a href="{{url('/cafe')}}">
+                                    <img class="img" src="images/cafe.png" alt="">
+                                </a>
+                               
                                 <!-- <div class="content left">
                                     <div class="left-content">
                                         <img src="images/cup-icon.png" alt="cap">
@@ -112,7 +115,9 @@ $notification_header = true; ?>
                         </div>
                         <div class="item">
                             <div class=" wow slideInRight">
-                                <img class="img" src="images/catering-index.png" alt="">
+                                <a href="{{url('/catering')}}">
+                                    <img class="img" src="images/catering-index.png" alt="">
+                                </a>
                                 <!-- <div class="content right">
                                     <div class="right-content">
                                         <img src="images/Catering.svg" alt="cap">
