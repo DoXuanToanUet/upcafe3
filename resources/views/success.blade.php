@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Details')
 @section('content')
-    {{$order}}
+    {{-- {{$order}} --}}
     <div class="be-wrapper be-fixed-sidebar success-page " style="background-color: white" >
         @include('layouts.checkout-heading', ['currentPage' => $currentPage ?? null])
 

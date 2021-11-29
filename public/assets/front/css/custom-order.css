@@ -1,603 +1,1362 @@
 @font-face {
+
 	font-family: "CocoSharp";
+
 	font-style: normal;
+
 	font-weight: 700;
+
 	src: url("../fonts/CocoSharp-Bold.otf") format("opentype");
+
 }
 
+
+
 @font-face {
+
 	font-family: "CocoSharp";
+
 	font-style: normal;
+
 	font-weight: 400;
+
 	src: url("../fonts/CocoSharp-Regular.otf") format("opentype");
+
+}
+
+
+
+@font-face {
+
+	font-family: "CocoSharp";
+
+	font-style: normal;
+
+	font-weight: 800;
+
+	src: url("../fonts/CocoSharp-Extrabold.otf") format("opentype");
+
 }
 
 @font-face {
-	font-family: "CocoSharp";
-	font-style: normal;
-	font-weight: 800;
-	src: url("../fonts/CocoSharp-Extrabold.otf") format("opentype");
-}
-@font-face {
+
 	font-family: "Ernest and Emily";
+
 	font-style: normal;
+
 	font-weight: normal;
+
 	src: url("../fonts/ErnestandEmily.otf") format("opentype");
+
 }
+
+
 
 .food-section,.food-section h4,.dinner .full span,.small, small,
+
 .timing-banner.contect_part1 .contect_part11 p, .timing-banner.contect_part1 .contect_part12 p,
+
 .subscribe-form a{
+
     font-family: "CocoSharp";
+
 }
+
+
 
 .food-section ul li,.food-section p,.food-section .form-check-label,
+
 .be-wrapper .navbar-nav span,
+
 .food-section .card .card-body span,.selection .price-span{
+
     font-size: 18px !important;
+
     font-family: "CocoSharp";
+
     font-weight: 400 !important; 
-}
-.food-section .card-header h4,.option3-section .full .head h4{
-    font-family: "CocoSharp";
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 28px;
-}
-.food-section .card-footer{
-    padding: 0px !important;
-    background-color: #fff !important;
-}
-.food-section .card-footer .selection{
-    padding: 20px;
-    
-}
-.dinner .full span{ 
-    font-size: 18px;
-}
-.full-custom .content{
-    height: auto;
-}
-.be-left-sidebar .sidebar-elements .active-first.main-option a{
-    background-color: rgba(142, 195, 155, 0.7) !important;
-}
-.buffet-main-options .inner-title h3{
-    font-size: 32px !important; 
-    font-size: "coco" !important;
-}
-.buffet-main-options .inner-title ul li{
-    font-size: 18px !important; 
-    font-size: "coco" !important;
-    font-weight: normal !important;
-}
-.food-section .full.full-custom .p-2{
-    padding-top: 30px !important;
-}
-.tea-page .full-custom .content{
-    height: 120px;
-}
-.lunch-page .full-custom .content{
-    height: 230px;
-}
-.dinner-page .full-custom .content{
-    height: 220px;
-}
-.promise_content h3,.catering_title p,
-.promise_content h2,.catering_title h2,.about_content p,
-.about_content h2,.about_content .about-p2,.slide_gel_title p,#slide_gal_area .slide_gel_title h2,
-.eapps-instagram-feed-title,.praise_title h2,.ourcafe_content h2,.ourcafe_content a,.catering_content h2,
-.catering_content a,.footer-social-icon span,
-.banner_overlay_content.boct a,.promise_contentp,.top_review1 p,.ser_icons p,
-.manu_title p,.manu_title h2,.manu_title .mtp,
-.confirm-section .review_ul ul li,.confirm-section .time p,
-.delivery-section .full h4,.delivery-section input[type='text'],
-.buffet-main-options .title-buffet h3{
-    font-family: "CocoSharp";
-    
-}
-.promise_content h3{
-    font-size: 32px;
-    font-weight: 700;
-}
-.promise_content h2,.catering_title h2{
-   font-size: 57px;
-   font-weight: 800;
-}
-/* Cart page css */
-.cart-page-title h3{
-    font-size: 32px;
-}
-.confirm-section .review_ul ul li,.confirm-section .review_ul p{
-    font-size: 18px;
-}
-.confirm-section .review_ul ul li{
-    /* margin-bottom: 10px; */
-    line-height: 1.5;
-}
-input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
-    width: 30px;
-    height: 30px;
-}
-.form-check-input:focus{
-    box-shadow: none;
-}
-.tea-page .full-custom .content{
-    height:140px;
-}
-.lunch-page .full-custom .content{
-    height:200px;
-}
-.dinner-page .full-custom .content{
-    height:230px;
-}
-#sub-option img{
-    object-fit: contain;
-}
-.be-left-sidebar:before{
-    border-right: 0px !important;
-}
-.delivery-section{
-    padding: 30px 53px;
-}
-.review-table .why-just{
-    padding: 40px 60px 80px !important;
-}
-.detail-page  .review-table input[type='text'],.detail-page  .fcommon{
-    height: 60px;
-    border:1px solid #1B1A19;
-    border-radius: 3px;
-    font-family: "CocoSharp";
-    font-size: 15px;
-}
-.detail-page  .review-table input[type='text']:focus{
-    border:1px solid #8EC39B;
-}
-.detail-page .review-table input[type='text']::placeholder {
-    font-size: 16px;
-  }
-  .review-table .note-info{
-      font-family: "CocoSharp";
-      font-size:18px;
-      font-weight: 700;
-      line-height: 32px;
-      margin-top: 40px;
-  }
-.delivery-section .full h4{
-    font-size: 24px;
-    margin-bottom:35px;
-}
-.min-heigh{
-    min-height: 575px;
-}
-.delivery-pickup{
-    padding-left: 30px !important; 
-}
-.btn.btn-add-more{
-    border: 3px solid #8EC39B;
-   
-    color: #8EC39B;
-    padding: 20px 0px;
-    margin: 50px 0px;
-    transition: all .3s ease;
-    font-size: 18px;
-}
-.review-page .btn.view-my-selection-button,.review-page .btn.btn-add-more{
-    font-family: "CocoSharp";
-    width: 65% !important;
-    border-radius: 2px;
-}
-.review-page .btn.view-my-selection-button{
-    font-size: 20px;
-}
-.btn.view-my-selection-button{
-    font-size: 16px;
-}
-.price-span{
-    color:#8EC39B !important;
-    font-size: 20px;
-}
-.btn.btn-add-more:hover{
-    background-color: #8EC39B;
-    color: #fff;
-}
-.review-table-detail{
-    padding-right: 50px !important;
-}
-.be-left-sidebar .sidebar-elements>li{
-    border:2px solid #1B1A19 !important;
-    border-radius: 2px;
-}
-.be-left-sidebar .sidebar-elements>li>a{
-    color: #1B1A19;
-    font-size: 24px;
-    padding: 0px 10px ;
-}
-.be-left-sidebar .sidebar-elements a .additional{
-    font-size: 16px;
-    color: #1B1A19;
-}
-.promise_content{
-    margin-top: 160px;
-}
-.xmas-themed-container .card-body{
-    min-height: 200px;
-}
-.food-section .card-footer{
-    padding-bottom: 10px !important;
-}
-.selection .selection-name {
-    width: 50%;
-}
-.user-group-img span{
-    font-size: 18px;
-    color: #8EC39B  !important;
-}
-.cart-page-title h3{
-    text-transform: uppercase;
-}
-.confirm-section .time p {
-    font-size: 18px;
-    line-height: 32px;
-}
-.review-table-detail .full{
-    padding: 40px 40px 60px !important;
-}
-.border-custom{
-    border: 3px solid #8EC39B !important;
-    border-radius: 2px !important;
-}
-.border-custom .head,.border-custom .card-header{
-    background-color: rgba(142, 195, 155, 0.2) !important;
-}
-.border-background{
-    background: rgba(142, 195, 155, 0.2);
-}
-.main-page .button-section ul li a,.main-page .button-section .show{
-    padding: 8px 32px !important;
-    color:  #8EC39B;
-    font-size: 17px;
-    display: block;
-    height: auto;
-    text-align: center;
-    height: 45px;
-    line-height: unset;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    min-width: 120px !important;
-}
-.main-page .button-section ul li{
-    position: relative;
 
 }
-.main-page .button-section ul li:not(:first-child){
-    margin-left: 45px;
-}
-.main-page .button-section ul li span::before{
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 2px;
-    right: -80px;
-    background: #000;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.food-section .left-gray,.food-section .left-white{
-    height: 100%;
-}
-.island-container small,.high-tea-container small{
-    font-size: 16px;
-}
-.food-section .card-header .selection input[type=radio]:after{
-    width:30px;
-    height: 30px;
-}
-.island-container .card{
-    min-height: 300px;
-}
-.addition-icon{
-    margin-left: 10px;
-}
-.review-table-detail  hr:last-of-type{
-    display: none;
-}
-/* .review-table-detail .review-main-item{
-    font-size: 12px !important;
-} */
-.review-table-detail .review-item{
-    font-size: 20px !important;
-    text-transform: unset !important;
-}
-/* Thank for order page css */
-.success-page{
-    margin-top: 50px;
-}
-.review-detail-contact .order-details-done{
-    padding: 30px 40px !important;
-}
-.success-page-container{
-    padding-left: 38px;
-}
-.order-detail-title{
-    position: absolute;
-    background-color: #1B1A19;
-    left: 15px;
-    top: 30px;
-    color: #fff;
-    padding: 20px 40px;
-}
-.order-detail-desc{
-    margin-top: 110px;
-}
-.btn.backtotheCafe{
-    padding: 20px 40px;
-    display: table;
-    margin: 0px auto;
-    transition: all 0.3s ease;
-}
-.btn.backtotheCafe:hover{
-    background-color: #7eaf8a !important;
-}
-.delivery-address input{
-    margin-bottom: 15px !important;
-}
-.delivery-text{
-    font-size: 18px;
-    margin-top: 40px;
-    font-weight: 700;
-}
-.delivery-sub-text{
-    font-size: 18px;
-}
-.delivery-show-time{
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #000;
-    font-weight: 600;
-}
-.pickup-address p{
-    font-size: 24px;
-    line-height: 38px;
-}
-.xdsoft_datepicker.active{
-    width: calc(100% - 100px) !important;
-}
-.xdsoft_datetimepicker{
-    width: 100% !important;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
-    border: 0px !important;
-    font-size: 18px !important;
-    text-align: center !important;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current{
-    background-color: #8EC39B  !important;
-    box-shadow: none !important;
-    /* border-radius: 50% !important; */
-    font-family: "Roboto" !important;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td:hover{
-    /* border-radius: 50% !important; */
-}
-.xdsoft_datetimepicker .xdsoft_calendar th{
-    background: #fff !important;
-}
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div{
-    font-size: 14px  !important;
-}
-.delivery-infomation{
-    font-size: 18px;
-    line-height: 32px;
-}
-.timing-banner.contect_part1 h2,.dinner-cafe-section .all span,
-.dinner-cafe-section .full h3,.option3-section .full span{
+
+.food-section .card-header h4,.option3-section .full .head h4{
+
     font-family: "CocoSharp";
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    font-size: 28px;
+
 }
-/* .error-border{
-    border:1px solid red !important;
-} */
-/* .error-mess{
-    text-align: left;
-    padding: 5px 0px;
-    font-size: 15px;
+
+.food-section .card-footer{
+
+    padding: 0px !important;
+
+    background-color: #fff !important;
+
 }
-.error-mess.text-danger{
-    display: block;
-}
-.error-mess{
-    display: none;
-} */
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-.review_silder .prev-arrow {
-    position: absolute;
-    top:50%;
-    left: -3rem;
-    transform: translateY(-50%);
-    margin-top: 0px;
-}
-.review_silder .next-arrow {
-    position: absolute;
-    top:50%;
-    right: -3rem;
-    transform: translateY(-50%);
-}
-@media screen and  (min-width:1366px){
-     .navbar .page-title{
-         min-width: 650px;
-     }
-     .finger-food .nav-link{
-         margin-left: 0px;
-     }
-}
-@media (min-width: 1300px) and (max-width: 1499.99px){
-    .banner_overlay_content h1 {
-        font-size: 90px;
-        background: none;
-    }
-    .timing-banner.contect_part1{
-        top: 550px;
-    }
-}
-@media screen and (max-width: 1024px){
-    .banner_overlay_content h1{
-        font-size: 50px;
-    }
-    .banner_overlay_content{
-        padding-top: 50px;
-    }
-    .banner_slider{
-        height:400px;
-    }
-    .timing-banner.contect_part1{
-        top: 350px;
-    }
-}
-@media screen and (max-width:991px) {
-    .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
-      display: none;
-    }
-    .review-page .be-content ,.detail-page  .be-content,.success-page .be-content{
-        margin-left: 0px;
-    }
-    .review-page  .review-table-detail{
-        padding-right: 15px !important;
-    }
-    .delivery-section{
-        padding: 30px 0px;
-    }
-    .success-page-container{
-        padding-left: 0px;
-    }
-    .island-container div,.graze-container div,.funeral-container div,
-    .high-tea-container div,.platters-container div,.xmas-themed-container div{
-        max-width: 100%;
-        flex: 100% !important;
-    }
-    .detail-page .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box{
-        width: 50px;
-        height: 225px;
-    }
-    .ourcafe_content h2{
-        font-size: 30px ;
-    }
-    .catering_title h2{
-        line-height: 70px;
-    }
-    .copyright-text{
-        padding-bottom: 40px;
-    }
+
+.food-section .card-footer .selection{
+
+    padding: 20px;
+
     
-    .promise_content{
-        margin-top: 40px;
-    }
-    /* .left-sidebar-spacer.open .left-sidebar-scroll{
-        overflow-y:visible !important;
-        height: calc(100vh - 60px);
-    } */
-    .single-cta{
-        display: flex;
-    }
+
 }
-@media (min-width: 992px) and (max-width: 1299.99px){
-    .timing-banner.contect_part1 h2 {
-        font-size: 30px;
-        line-height: 40px;
-        padding-bottom: 10px;
+
+.dinner .full span{ 
+
+    font-size: 18px;
+
+}
+
+.full-custom .content{
+
+    height: auto;
+
+}
+
+.be-left-sidebar .sidebar-elements .active-first.main-option a{
+
+    background-color: rgba(142, 195, 155, 0.7) !important;
+
+}
+
+.buffet-main-options .inner-title h3{
+
+    font-size: 32px !important; 
+
+    font-size: "coco" !important;
+
+}
+
+.buffet-main-options .inner-title ul li{
+
+    font-size: 18px !important; 
+
+    font-size: "coco" !important;
+
+    font-weight: normal !important;
+
+}
+
+.food-section .full.full-custom .p-2{
+
+    padding-top: 30px !important;
+
+}
+
+.tea-page .full-custom .content{
+
+    min-height: 120px;
+
+}
+
+.lunch-page .full-custom .content{
+
+    min-height: 230px;
+
+}
+
+.dinner-page .full-custom .content{
+
+    min-height: 220px;
+
+}
+
+.promise_content h3,.catering_title p,
+
+.promise_content h2,.catering_title h2,.about_content p,
+
+.about_content h2,.about_content .about-p2,.slide_gel_title p,#slide_gal_area .slide_gel_title h2,
+
+.eapps-instagram-feed-title,.praise_title h2,.ourcafe_content h2,.ourcafe_content a,.catering_content h2,
+
+.catering_content a,.footer-social-icon span,
+
+.banner_overlay_content.boct a,.promise_contentp,.top_review1 p,.ser_icons p,
+
+.manu_title p,.manu_title h2,.manu_title .mtp,
+
+.confirm-section .review_ul ul li,.confirm-section .time p,
+
+.delivery-section .full h4,.delivery-section input[type='text'],
+
+.buffet-main-options .title-buffet h3{
+
+    font-family: "CocoSharp";
+
+    
+
+}
+
+.promise_content h3{
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+}
+
+.promise_content h2,.catering_title h2{
+
+   font-size: 57px;
+
+   font-weight: 800;
+
+}
+
+/* Cart page css */
+
+.cart-page-title h3{
+
+    font-size: 32px;
+
+}
+
+.confirm-section .review_ul ul li,.confirm-section .review_ul p{
+
+    font-size: 18px;
+
+}
+
+.confirm-section .review_ul ul li{
+
+    /* margin-bottom: 10px; */
+
+    line-height: 1.5;
+
+}
+
+input[type=radio]:after,.xmas-themed-container input[type='checkbox']:after{
+
+    width: 30px;
+
+    height: 30px;
+
+}
+
+.form-check-input:focus{
+
+    box-shadow: none;
+
+}
+
+.tea-page .full-custom .content{
+
+    min-height:140px;
+
+}
+
+.lunch-page .full-custom .content{
+
+    min-height:200px;
+
+}
+
+.dinner-page .full-custom .content{
+
+    min-height:230px;
+
+}
+
+#sub-option img{
+
+    object-fit: contain;
+
+}
+
+.be-left-sidebar:before{
+
+    border-right: 0px !important;
+
+}
+
+.delivery-section{
+
+    padding: 30px 53px;
+
+}
+
+.review-table .why-just{
+
+    padding: 40px 60px 80px !important;
+
+}
+
+.detail-page  .review-table input[type='text'],.detail-page  .fcommon{
+
+    height: 60px;
+
+    border:1px solid #1B1A19;
+
+    border-radius: 3px;
+
+    font-family: "CocoSharp";
+
+    font-size: 15px;
+
+}
+
+.detail-page  .review-table input[type='text']:focus{
+
+    border:1px solid #8EC39B;
+
+}
+
+.detail-page .review-table input[type='text']::placeholder {
+
+    font-size: 16px;
+
+  }
+
+  .review-table .note-info{
+
+      font-family: "CocoSharp";
+
+      font-size:18px;
+
+      font-weight: 700;
+
+      line-height: 32px;
+
+      margin-top: 40px;
+
+  }
+
+.delivery-section .full h4{
+
+    font-size: 24px;
+
+    margin-bottom:35px;
+
+}
+
+.min-heigh{
+
+    min-height: 575px;
+
+}
+
+.delivery-pickup{
+
+    padding-left: 30px !important; 
+
+}
+
+.btn.btn-add-more{
+
+    border: 3px solid #8EC39B;
+
+   
+
+    color: #8EC39B;
+
+    padding: 20px 0px;
+
+    margin: 50px 0px;
+
+    transition: all .3s ease;
+
+    font-size: 18px;
+
+}
+
+.review-page .btn.view-my-selection-button,.review-page .btn.btn-add-more{
+
+    font-family: "CocoSharp";
+
+    width: 65% !important;
+
+    border-radius: 2px;
+
+}
+
+.review-page .btn.view-my-selection-button{
+
+    font-size: 20px;
+
+}
+
+.btn.view-my-selection-button{
+
+    font-size: 16px;
+
+}
+
+.price-span{
+
+    color:#8EC39B !important;
+
+    font-size: 20px;
+
+}
+
+.btn.btn-add-more:hover{
+
+    background-color: #8EC39B;
+
+    color: #fff;
+
+}
+
+.review-table-detail{
+
+    padding-right: 50px !important;
+
+}
+
+.be-left-sidebar .sidebar-elements>li{
+
+    border:2px solid #1B1A19 !important;
+
+    border-radius: 2px;
+
+}
+
+.be-left-sidebar .sidebar-elements>li>a{
+
+    color: #1B1A19;
+
+    font-size: 24px;
+
+    padding: 0px 10px ;
+
+}
+
+.be-left-sidebar .sidebar-elements a .additional{
+
+    font-size: 16px;
+
+    color: #1B1A19;
+
+}
+
+.promise_content{
+
+    margin-top: 160px;
+
+}
+
+.xmas-themed-container .card-body{
+
+    min-height: 200px;
+
+}
+
+.food-section .card-footer{
+
+    padding-bottom: 10px !important;
+
+}
+
+.selection .selection-name {
+
+    width: 50%;
+
+}
+
+.user-group-img span{
+
+    font-size: 18px;
+
+    color: #8EC39B  !important;
+
+}
+
+.cart-page-title h3{
+
+    text-transform: uppercase;
+
+}
+
+.confirm-section .time p {
+
+    font-size: 18px;
+
+    line-height: 32px;
+
+}
+
+.review-table-detail .full{
+
+    padding: 40px 40px 60px !important;
+
+}
+
+.border-custom{
+
+    border: 3px solid #8EC39B !important;
+
+    border-radius: 2px !important;
+
+}
+
+.border-custom .head,.border-custom .card-header{
+
+    background-color: rgba(142, 195, 155, 0.2) !important;
+
+}
+
+.border-background{
+
+    background: rgba(142, 195, 155, 0.2);
+
+}
+
+.main-page .button-section ul li a,.main-page .button-section .show{
+
+    padding: 8px 32px !important;
+
+    color:  #8EC39B;
+
+    font-size: 17px;
+
+    display: block;
+
+    height: auto;
+
+    text-align: center;
+
+    height: 45px;
+
+    line-height: unset;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 2px;
+
+    min-width: 120px !important;
+
+}
+
+.main-page .button-section ul li{
+
+    position: relative;
+
+
+
+}
+
+.main-page .button-section ul li:not(:first-child){
+
+    margin-left: 45px;
+
+}
+
+.main-page .button-section ul li span::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 2px;
+
+    right: -80px;
+
+    background: #000;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.food-section .left-gray,.food-section .left-white{
+
+    height: 100%;
+
+}
+
+.island-container small,.high-tea-container small{
+
+    font-size: 16px;
+
+}
+
+.food-section .card-header .selection input[type=radio]:after{
+
+    width:30px;
+
+    height: 30px;
+
+}
+
+.island-container .card{
+
+    min-height: 300px;
+
+}
+
+.addition-icon{
+
+    margin-left: 10px;
+
+}
+
+.review-table-detail  hr:last-of-type{
+
+    display: none;
+
+}
+
+/* .review-table-detail .review-main-item{
+
+    font-size: 12px !important;
+
+} */
+
+.review-table-detail .review-item{
+
+    font-size: 20px !important;
+
+    text-transform: unset !important;
+
+}
+
+/* Thank for order page css */
+
+.success-page{
+
+    margin-top: 50px;
+
+}
+
+.review-detail-contact .order-details-done{
+
+    padding: 30px 40px !important;
+
+}
+
+.success-page-container{
+
+    padding-left: 38px;
+
+}
+
+.order-detail-title{
+
+    position: absolute;
+
+    background-color: #1B1A19;
+
+    left: 15px;
+
+    top: 30px;
+
+    color: #fff;
+
+    padding: 20px 40px;
+
+}
+
+.order-detail-desc{
+
+    margin-top: 110px;
+
+}
+
+.btn.backtotheCafe{
+
+    padding: 20px 40px;
+
+    display: table;
+
+    margin: 0px auto;
+
+    transition: all 0.3s ease;
+
+}
+
+.btn.backtotheCafe:hover{
+
+    background-color: #7eaf8a !important;
+
+}
+
+.delivery-address input{
+
+    margin-bottom: 15px !important;
+
+}
+
+.delivery-text{
+
+    font-size: 18px;
+
+    margin-top: 40px;
+
+    font-weight: 700;
+
+}
+
+.delivery-sub-text{
+
+    font-size: 18px;
+
+}
+
+.delivery-show-time{
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    color: #000;
+
+    font-weight: 600;
+
+}
+
+.pickup-address p{
+
+    font-size: 24px;
+
+    line-height: 38px;
+
+}
+
+.xdsoft_datepicker.active{
+
+    width: calc(100% - 100px) !important;
+
+}
+
+.xdsoft_datetimepicker{
+
+    width: 100% !important;
+
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
+
+    border: 0px !important;
+
+    font-size: 18px !important;
+
+    text-align: center !important;
+
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current{
+
+    background-color: #8EC39B  !important;
+
+    box-shadow: none !important;
+
+    /* border-radius: 50% !important; */
+
+    font-family: "Roboto" !important;
+
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover{
+
+    /* border-radius: 50% !important; */
+
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar th{
+
+    background: #fff !important;
+
+}
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div{
+
+    font-size: 14px  !important;
+
+}
+
+.delivery-infomation{
+
+    font-size: 18px;
+
+    line-height: 32px;
+
+}
+
+.timing-banner.contect_part1 h2,.dinner-cafe-section .all span,
+
+.dinner-cafe-section .full h3,.option3-section .full span{
+
+    font-family: "CocoSharp";
+
+}
+
+/* .error-border{
+
+    border:1px solid red !important;
+
+} */
+
+/* .error-mess{
+
+    text-align: left;
+
+    padding: 5px 0px;
+
+    font-size: 15px;
+
+}
+
+.error-mess.text-danger{
+
+    display: block;
+
+}
+
+.error-mess{
+
+    display: none;
+
+} */
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+}
+
+.review_silder .prev-arrow {
+
+    position: absolute;
+
+    top:50%;
+
+    left: -3rem;
+
+    transform: translateY(-50%);
+
+    margin-top: 0px;
+
+}
+
+.review_silder .next-arrow {
+
+    position: absolute;
+
+    top:50%;
+
+    right: -3rem;
+
+    transform: translateY(-50%);
+
+}
+
+.navbar.navbar-expand.be-top-header{
+
+    z-index: 99999999;
+
+}
+
+@media screen and  (min-width:1368px){
+
+    .navbar .page-title{
+
+        min-width: 650px;
+
     }
-    .banner_overlay_content.boct h1 {
-        line-height: 150px;
+
+    .finger-food .nav-link{
+
+        margin-left: 0px;
+
     }
-    .model_img1{
-        width: unset;
+
+   
+
+}
+
+@media screen and (max-width:1500px) {
+
+   .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
+
+       display: none;
+
+     }
+
+     .review-page .be-content ,.detail-page  .be-content,.success-page .be-content{
+
+       margin-left: 0px;
+
+   }
+
+   .review-table .why-just{
+
+       padding: 30px !important;
+
+   }
+
+   .why-just h4{
+
+       margin-top: 0px;
+
+   }
+
+}
+
+@media (min-width: 1300px) and (max-width: 1499.99px){
+
+    .banner_overlay_content h1 {
+
+        font-size: 90px;
+
+        background: none;
+
     }
-    .tea-page .full-custom .content,.lunch-page .full-custom .content,
-    .dinner-page .full-custom .content{
-        height: unset;
+
+    .timing-banner.contect_part1{
+
+        top: 500px;
+
     }
-    .be-top-header .be-icons-nav{
+
+}
+
+@media screen and (max-width: 1024px){
+
+    .banner_overlay_content h1{
+
+        font-size: 50px;
+
+    }
+
+    .banner_overlay_content{
+
+        padding-top: 50px;
+
+    }
+
+    .banner_slider{
+
+        height:576px;
+
+    }
+
+    .timing-banner.contect_part1{
+
+        top: 350px;
+
+    }
+
+    #banner_area{
+
+        min-height: 576px;
+
+    }
+
+    .review-page .be-left-sidebar,.detail-page .be-left-sidebar,.success-page .be-left-sidebar{
+
         display: none;
+
+      }
+
+      .review-page .be-content ,.detail-page  .be-content,.success-page .be-content{
+
+        margin-left: 0px;
+
     }
-    .food-section .card-header h4, .option3-section .full .head h4{
-        font-size: 20px;
+
+}
+
+@media screen and (max-width:991px) {
+
+    .review-table .why-just{
+
+        min-height: 0px !important;
+
     }
+
+    .review-page .be-content ,.detail-page  .be-content,.success-page .be-content{
+
+        margin-left: 0px;
+
+    }
+
+    .review-page  .review-table-detail{
+
+        padding-right: 15px !important;
+
+    }
+
+    .delivery-section{
+
+        padding: 30px 0px;
+
+    }
+
+    .success-page-container{
+
+        padding-left: 0px;
+
+    }
+
+    .island-container div,.graze-container div,.funeral-container div,
+
+    .high-tea-container div,.platters-container div,.xmas-themed-container div{
+
+        max-width: 100%;
+
+        flex: 100% !important;
+
+    }
+
+    .detail-page .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box{
+
+        width: 50px;
+
+        height: 225px;
+
+    }
+
+    .ourcafe_content h2{
+
+        font-size: 30px ;
+
+    }
+
+    .catering_title h2{
+
+        line-height: 70px;
+
+    }
+
+    .copyright-text{
+
+        padding-bottom: 40px;
+
+    }
+
+    
+
+    .promise_content{
+
+        margin-top: 40px;
+
+    }
+
+    /* .left-sidebar-spacer.open .left-sidebar-scroll{
+
+        overflow-y:visible !important;
+
+        height: calc(100vh - 60px);
+
+    } */
+
     .single-cta{
+
         display: flex;
+
     }
+
+    .sub-option{
+
+        margin-bottom: 15px;
+
+    }
+
+    .cta-text span{
+
+        word-break: break-word;
+
+    }
+
+    .review_silder .prev-arrow,.review_silder .next-arrow{
+
+        display: none !important;
+
+    }
+
+    #banner_area{
+
+        min-height: unset;
+
+    }
+
+    .row{
+
+        margin: 0px ;
+
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1299.99px){
+
+    .timing-banner.contect_part1 h2 {
+
+        font-size: 30px;
+
+        line-height: 40px;
+
+        padding-bottom: 10px;
+
+    }
+
+    .banner_overlay_content.boct h1 {
+
+        line-height: 150px;
+
+    }
+
+    .model_img1{
+
+        width: unset;
+
+    }
+
+    .tea-page .full-custom .content,.lunch-page .full-custom .content,
+
+    .dinner-page .full-custom .content{
+
+        height: unset;
+
+    }
+
+    .be-top-header .be-icons-nav{
+
+        display: none;
+
+    }
+
+    .food-section .card-header h4, .option3-section .full .head h4{
+
+        font-size: 20px;
+
+    }
+
+    .single-cta{
+
+        display: flex;
+
+    }
+    .food-section .col-lg-4{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .food-section .col-lg-4:last-child{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .food-section .col-lg-8{
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+    .tea-page .option3-section .full-custom, .tea-page  .option3-section{
+        min-height: 305px;
+    }
+    .lunch-page .option3-section .full-custom, .lunch-page  .option3-section{
+        min-height: 380px;
+    }
+    .dinner-page .option3-section .full-custom, .dinner-page  .option3-section{
+        min-height: 400px;
+    }
+    .tea-page  .food-section .full,.lunch-page .food-section .full,.dinner-page  .food-section .full{
+        background-color: #fff;
+    }
+    .tea-page .additional-section .full{
+        height: auto;
+    }
+    .lunch-page .additional-section{
+        margin: 50px 15px;
+    }
+    .tea-page  .main-selction-4 .view-my-selection {
+        padding-top: 20px;
+        padding-bottom: 0px !important;
+    }
+     #sub-option .view-my-selection{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    #sub-option .view-my-selection .view-my-selection-button{
+        min-width: 300px;
+        margin-left: 20px;
+    }
+    #sub-option .dinner-cafe-section .col-lg-4,.funeral-container .col-md-4,
+    .platters-container .col-md-4,.xmas-themed-container .col-md-4{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .island-container,.graze-container,.funeral-container,.high-tea-container,
+    .platters-container,.xmas-themed-container{
+       padding: 15px;
+    }
+    .island-container .col-md-4,.graze-container .col-md-4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .breakfast-page .food-section .full{
+        padding: 3rem !important;
+    }
+    .food-section .left-white{
+        transform: unset;
+        margin-left: 15px !important;
+    }
+
+}
+.center-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media screen and (max-width:575px){
+
     .ourcafe_content h2{
+
         font-size: 20px ;
+
     }
+
     .catering_title h2{
+
         line-height: 40px;
+
     }
+
     .food-section .left-gray{
+
         height: unset;
+
     }
+
     .navbar-nav{
+
         width: 100%;
+
     }
+
     .be-wrapper .navbar-nav span {
+
         font-size: 14px !important;
+
     }
+
     .be-left-sidebar .left-sidebar-toggle{
+
         font-weight: normal !important;
+
         font-size: 18px !important;
+
     }
+
     .banner_overlay_content h1{
+
         font-size: 40px;
+
     }
+
     .promise_content h3{
+
         font-size: 20px;
+
     }
+
     .promise_content h2, .catering_title h2{
+
         font-size: 30px;
+
     }
+
     .footer-social-icon{
+
         margin-bottom: 20px;
+
     }
+
     .review-page .review-table-detail .full{
+
         padding:10px !important;
+
     }
+
     .review-table .why-just{
+
         padding: 30px 15px !important;
+
         min-height: auto !important;
+
     }
+
     .delivery-address{
+
         padding: 0px !important;
+
     }
+
     .success-page{
+
         margin-top: 0px;
+
     }
+
     .success-page .container-success{
+
         margin: 0px !important;
+
         padding: 0px !important;
+
     }
+
     .promise_content{
+
         margin-top: 40px;
+
     }
+
     .banner_overlay_content.boct h1{
+
         font-size: 50px;
+
     }
+
     .single-cta{
+
         display: flex;
+
         align-items: center;
+
     }
+
     .cafe-page-order-button .order-now{
+
         width: 80%;
+
         margin: 30px auto 20px !important;
+
     }
+
     .cafe-page-order-button .order-now:last-child{
+
         margin-top: 0px;
+
     }
+
     .finger-food{
+
         height: 60px;
+
     }
+
     .banner_slider{
+
         height:unset;
+
     }
+
+    .main-content{
+
+        overflow:hidden !important;
+
+    }
+
 }
