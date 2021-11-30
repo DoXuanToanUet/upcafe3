@@ -86,7 +86,7 @@
         <div class="manu_title text-center">
                         <p>MADE WITH AROHA</p>
                         <h2>OUR CATERING MENU</h2>
-                        <p class="mtp">You can pick and choose from our range of set menu or we can create a tailored menu for your special event.
+                        <p class="mtp">Select from our wide range of options for your next special event.
 	</p>
                     </div>
             <div class="row d-flex align-items-center justify-content-center mt-5">

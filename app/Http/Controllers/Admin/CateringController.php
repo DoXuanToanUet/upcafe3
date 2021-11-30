@@ -151,6 +151,13 @@ class CateringController extends Controller
 
         $price = ($request->has('price_on_request') && $request->price_on_request == 1) ? -1 : $request->price;
 
+        $max_option = [
+            'carvery' => $request->carvery,
+            'seafood' => $request->seafood,
+            'sweet'   => $request->sweet,
+            'hot'     => $request->hot,
+            'salad'   => $request->salad
+         ];
         Catering::where('id', $request->id)->update([
             'name'          =>  $request->name,
             'content'       =>  $request->content,
@@ -161,6 +168,7 @@ class CateringController extends Controller
             'vegetarian'    =>  ($request->vegetarian) ? 1 : 0,
             'gluten'        =>  ($request->gluten) ? 1 : 0,
             'vegan'         =>  ($request->vegan) ? 1 : 0,
+            'max_option'    => json_encode( $max_option )
         ]);
 
         Session::flash('msg', ['Updated', 'success']);

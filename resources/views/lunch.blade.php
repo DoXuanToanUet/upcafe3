@@ -48,12 +48,12 @@
                                                                         <div class="card_icons1 text-center same-one tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-1.png" alt="man icon">
                                                                             <h6 class="ml-2 mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px; font-weight: 500;">{{$data['main-options'][$i]['group']}}</h6>
-                                                                            <span class="tooltiptext">No. of People</span>
+                                                                            <span class="tooltiptext">Minimum Order</span>
                                                                         </div>
                                                                         <div class="card_icons2  text-center same-one tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-2.png" alt="man icon">
                                                                             <h6 class="mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px;">$ <?=number_format($data['main-options'][$i]['price'],2)?></h6>
-                                                                            <span class="tooltiptext">Per Person</span>
+                                                                            <span class="tooltiptext">Price Per Person</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -89,12 +89,12 @@
                                                                         <div class="card_icons1 text-center same-one tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-1.png" alt="man icon">
                                                                             <h6 class="ml-2 mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px; font-weight: 500;">{{$data['main-options'][$i]['group']}}</h6>
-                                                                            <span class="tooltiptext">No. of People</span>
+                                                                            <span class="tooltiptext">Minimum Order</span>
                                                                         </div>
                                                                         <div class="card_icons2  text-center  same-one tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-2.png" alt="man icon">
                                                                             <h6 class="mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px;">$ <?=number_format($data['main-options'][$i]['price'],2)?></h6>
-                                                                            <span class="tooltiptext">Per Person</span>
+                                                                            <span class="tooltiptext">Price Per Person</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

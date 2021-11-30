@@ -278,12 +278,15 @@ $(document).on("submit", '#editCatering', function(event){
             $("#wait").css("display", "block");
         },
         complete: function () {
+            
             $("#wait").css("display", "none");
         },
         success: function(data){
+          
             clearError();
             if(data=='success'){
                 location.reload();
+               
             } else {
                 displayError(data);
             }

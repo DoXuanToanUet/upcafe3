@@ -81,13 +81,13 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                     <div class="footer-widget">
                         <div class="footer-widget-heading">
-                            <h3>Order Online</h3>
+                            <h3>Catering</h3>
                         </div>
                         <div class="footer-text mb-25">
                             <p>Don’t miss our delicious food. Place a order online now</p>
                         </div>
                         <div class="subscribe-form">
-                            <a class="btn btn-primary" href="{{ url('/catering/breakfast') }}" role="button">ORDER ONLINE</a>
+                            <a class="btn btn-primary" href="{{ url('/catering/breakfast') }}" role="button">CATERING ONLINE</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 text-center text-lg-start">
                     <div class="copyright-text">
-                        <p>Copyright &copy; <?php echo date("Y");?>, All Right Reserved <a href="https://codepen.io/anupkumar92/">UP Cafe and Catering</a></p>
+                        <p>Copyright &copy; <?php echo date("Y");?>, All Right Reserved <a href="https://codepen.io/anupkumar92/">Up Cafe and Catering</a></p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-end">

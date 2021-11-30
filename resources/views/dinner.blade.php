@@ -32,10 +32,10 @@
                                 </div>
                                 </div>
                                 <div class="col-lg-3 col-12">
-                                <div class="full total-users">
-                                    <img src="/assets/front/assets/img/black.png" class="img" alt="">
-                                    <h3 class="mt-3">20</h3>
-                                </div>
+                                <!--<div class="full total-users">-->
+                                <!--    <img src="/assets/front/assets/img/black.png" class="img" alt="">-->
+                                <!--    <h3 class="mt-3">20</h3>-->
+                                <!--</div>-->
                                 </div>
                             </div>
                         </div>
@@ -64,8 +64,9 @@
                                                                             </div>
                                                                             <div class="col-md-4 text-center tooltip-div">
                                                                                 <img src="/assets/front/assets/img/green-2.png" alt="man icon">
-                                                                                <p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
-                                            <span class="tooltiptext">No. of People</span>                                </div>
+                                                                                <!--<p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>-->
+                                                                                <!--<span class="tooltiptext">Minimum Order</span>                                -->
+                                                                            </div>
                                                                             <div class="col-md-1">
                                                                                 <div class="box3 float-right">
                                                                                     <input class="form-check-input setup-radio check-dinner-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
@@ -88,18 +89,193 @@
                                                                     @if(isset($data['setup']) && count($data['setup']) > 0)
 
                                                                         <div class="card-footer  setup setup-{{$data['main-options'][$i]['id']}}" style="background: rgba(142, 195, 155, 0.2); border:none;">
-
+                                                                            <div class="" id="">
+                                                                                <div class="main-content">
+                                                                                    <div class="dinner-cafe-section py-4">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-12 col-12">
+                                                                                                <!-- option 1 -->
+                                                                                                @if(isset($data) && isset($data['carvery']) && count($data['carvery']))
+                                                                                                    <div class="option3-section dinner">
+                                                                                                        <div class="row" style="margin-top: 44px;">
+                                                                                                            <div class="col-12">
+                                                                                                                <div class="full cavery-option">
+                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <h4>CARVERY</h4>
+                                                                                                                                {{-- {{ dd($data['main-options'][$i]['max_option'] )  }} --}}
+                                                                                                                                @php
+                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                                    
+                                                                                                                                @endphp
+                                                                                                                                <p>
+                                                                                                                                    SELECT : 
+                                                                                                                                    <span class="countSelectCarvery">{{ isset( $maxOption) ?  $maxOption->carvery : '' }}</span>
+                                                                                                                                </p>
+                                                                                                       
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                        @foreach($data['carvery'] as $d)
+                                                                                                                            <div class="check-1">
+                                                                                                                                <input class="form-check-input carvery-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            </div>
+                                                                                                                        @endforeach
+                                                                                                                    </div>
+                                                                        
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                
+                                                                                                @if(isset($data) && isset($data['hot']) && count($data['hot']))
+                                                                                                    <div class="option3-section dinner">
+                                                                                                        <div class="row" style="margin-top: 44px;">
+                                                                                                            <div class="col-12">
+                                                                                                                <div class="full">
+                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <h4>HOT OPTIONS</h4>
+                                                                                                                                @php
+                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                                
+                                                                                                                                @endphp
+                                                                                                                                {{ isset( $maxOption) ?  $maxOption->hot : '' }}
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                        @foreach($data['hot'] as $d)
+                                                                                                                            <div class="check-1">
+                                                                                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="hot[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            </div>
+                                                                                                                        @endforeach
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                
+                                                                                            <div class="col-lg-12 col-12">
+                                                                                                <!-- option 1 -->
+                                                                                                @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
+                                                                                                    <div class="option3-section dinner">
+                                                                                                        <div class="row" style="margin-top: 44px;">
+                                                                                                            <div class="col-12">
+                                                                                                                <div class="full">
+                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <h4>SEAFOOD OPTIONS</h4>
+                                                                                                                                @php
+                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                                
+                                                                                                                                @endphp
+                                                                                                                                {{ isset( $maxOption) ?  $maxOption->seafood : '' }}
+                                                                                                
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                        @foreach($data['sea-food'] as $d)
+                                                                                                                            <div class="check-1">
+                                                                                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            </div>
+                                                                                                                        @endforeach
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                
+                                                                                                @if(isset($data) && isset($data['salad']) && count($data['salad']))
+                                                                                                    <div class="option3-section dinner">
+                                                                                                        <div class="row" style="margin-top: 44px;">
+                                                                                                            <div class="col-12">
+                                                                                                                <div class="full">
+                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <h4>SALAD OPTIONS</h4>
+                                                                                                                                @php
+                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                                
+                                                                                                                                @endphp
+                                                                                                                                {{ isset( $maxOption) ?  $maxOption->salad : '' }}
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                        @foreach($data['salad'] as $d)
+                                                                                                                            <div class="check-1">
+                                                                                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            </div>
+                                                                                                                        @endforeach
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                
+                                                                                            <div class="col-lg-12 col-12">
+                                                                                                <!-- option 1 -->
+                                                                                                @if(isset($data) && isset($data['sweet']) && count($data['sweet']))
+                                                                                                    <div class="option3-section dinner">
+                                                                                                        <div class="row" style="margin-top: 44px;">
+                                                                                                            <div class="col-12">
+                                                                                                                <div class="full">
+                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col">
+                                                                                                                                <h4>SWEET OPTIONS</h4>
+                                                                                                                                @php
+                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                                
+                                                                                                                                @endphp
+                                                                                                                                {{ isset( $maxOption) ?  $maxOption->sweet : '' }}
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                        @foreach($data['salad'] as $d)
+                                                                                                                            <div class="check-1">
+                                                                                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sweet[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            </div>
+                                                                                                                        @endforeach
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                        </div>
+                                                                                       
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                             <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
                                                                             @foreach($data['setup'] as $s)
-
-                                                                                <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                                                                    <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
-                                                                                    <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                                    <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
-
-                                                                                </div>
+                                                                                @if(($data['main-options'][$i]['name'] == 'Dinner | Option 1' && ($s->name == '1. FULL BUFFET SETUP P/Person' || $s->name == '1. SERVES IN DISPOSABLE FOIL TRAY P/Person')) || 
+                                                                                ($data['main-options'][$i]['name'] == 'Dinner | Option 2' && ($s->name == '2. FULL BUFFET SETUP P/Person' || $s->name == '2. SERVES IN DISPOSABLE FOIL TRAY P/Person')))
+                                                                                    <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                                                                        <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
+                                                                                        <span class="price-span">$ <?=number_format($s->price,2)?></span>
+                                                                                        <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+    
+                                                                                    </div>
+                                                                                @endif
                                                                             @endforeach
-
+                                                                            
 
                                                                         </div>
                                                                     @endif
@@ -125,8 +301,8 @@
                                                                         </div>
                                                                         <div class="col-md-4 text-center tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-2.png" alt="man icon">
-                                                                            <p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>
-                                                                            <span class="tooltiptext">No. of People</span>
+                                                                            <!--<p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>-->
+                                                                            <!--<span class="tooltiptext">Minimum Order</span>-->
                                                                         </div>
                                                                         <div class="col-md-1">
                                                                             <div class="box3 float-right">
@@ -148,13 +324,15 @@
 
                                                                     <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
                                                                     @foreach($data['setup'] as $s)
-
-                                                                        <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                                                            <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
-                                                                            <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                            <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
-
-                                                                        </div>
+                                                                        @if(($data['main-options'][$i]['name'] == 'Dinner | Option 3' && ($s->name == '3. FULL BUFFET SETUP P/Person' || $s->name == '3. SERVES IN DISPOSABLE FOIL TRAY P/Person')) || 
+                                                                                ($data['main-options'][$i]['name'] == 'Dinner | Option 4' && ($s->name == '4. FULL BUFFET SETUP P/Person' || $s->name == '4. SERVES IN DISPOSABLE FOIL TRAY P/Person')))
+                                                                            <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                                                                <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
+                                                                                <span class="price-span">$ <?=number_format($s->price,2)?></span>
+                                                                                <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+    
+                                                                            </div>
+                                                                        @endif
                                                                     @endforeach
 
 
@@ -237,177 +415,7 @@
                 </div>
             </div>
 
-            <div class="be-content" id="sub-option">
-                <div class="main-content">
-                    <div class="dinner-cafe-section py-4">
-                        <div class="container-fluid">
-                            <div class="row mt-4">
-                                <div class="col-lg-3 col-md-6 col-12">
-                                    <div class="all">
-                                        <img src="/assets/front/assets/img/v.png" width="15%"> <span> VEGETARIAN</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-12">
-                                    <div class="all">
-                                        <img src="/assets/front/assets/img/gf.png" width="15%"> <span> GLUTEN FREE</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-12">
-                                    <div class="all">
-                                        <img src="/assets/front/assets/img/veg.png" width="15%"> <span> VEGAN</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-12">
-                                    <div class="all">
-                                        <span> PRICING AVAILABLE ON <span class="ml-1"> REQUEST</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-12">
-                                <!-- option 1 -->
-                                @if(isset($data) && isset($data['carvery']) && count($data['carvery']))
-                                    <div class="option3-section dinner">
-                                        <div class="row" style="margin-top: 44px;">
-                                            <div class="col-12">
-                                                <div class="full">
-                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h4>CARVERY</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                        @foreach($data['carvery'] as $d)
-                                                            <div class="check-1">
-                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-
-                                @if(isset($data) && isset($data['hot']) && count($data['hot']))
-                                    <div class="option3-section dinner">
-                                        <div class="row" style="margin-top: 44px;">
-                                            <div class="col-12">
-                                                <div class="full">
-                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h4>HOT OPTIONS</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                        @foreach($data['hot'] as $d)
-                                                            <div class="check-1">
-                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="hot[]"> &nbsp; <span>{{$d->name}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-
-                            <div class="col-lg-4 col-12">
-                                <!-- option 1 -->
-                                @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
-                                    <div class="option3-section dinner">
-                                        <div class="row" style="margin-top: 44px;">
-                                            <div class="col-12">
-                                                <div class="full">
-                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h4>SEAFOOD OPTIONS</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                        @foreach($data['sea-food'] as $d)
-                                                            <div class="check-1">
-                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-
-                                @if(isset($data) && isset($data['salad']) && count($data['salad']))
-                                    <div class="option3-section dinner">
-                                        <div class="row" style="margin-top: 44px;">
-                                            <div class="col-12">
-                                                <div class="full">
-                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h4>SALAD OPTIONS</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                        @foreach($data['salad'] as $d)
-                                                            <div class="check-1">
-                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]"> &nbsp; <span>{{$d->name}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-
-                            <div class="col-lg-4 col-12">
-                                <!-- option 1 -->
-                                @if(isset($data) && isset($data['sweet']) && count($data['sweet']))
-                                    <div class="option3-section dinner">
-                                        <div class="row" style="margin-top: 44px;">
-                                            <div class="col-12">
-                                                <div class="full">
-                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <h4>SWEET OPTIONS</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                        @foreach($data['salad'] as $d)
-                                                            <div class="check-1">
-                                                                <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sweet[]"> &nbsp; <span>{{$d->name}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="container-fluid main-selction-4  py-5">
-                            <div class="view-my-selection  mt-4 pb-5 ">
-                                <button type="button" class="btn btn-success sub-option arrow-button">MAIN OPTIONS</button>
-                                <button type="submit" class="btn btn-success  four view-my-selection-button" disabled>VIEW MY SELECTION</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </form>
     </div>
 

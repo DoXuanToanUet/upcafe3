@@ -188,8 +188,6 @@
                 <div class="delivery-section">
                     <!-- <div class="container"> -->
                         <!-- <form action=""> -->
-
-
                         <form id="details" class="row main-form-custom">
                             @csrf
                             <input type="hidden" value="1" name="type">
@@ -210,7 +208,7 @@
                                     <div class="input m-auto text-center">
                                         <input type="email" class="form-control mx-auto fcommon" placeholder="Email" name="email" required>
                                         {{-- <p class="error-mess ">Error message<</p>     --}}
-                                </div>
+                                    </div>
                                 <p class="note-info">Please note, all orders must be made 48-hours in advance of your event.</p> 
                             </div>
                     </div>

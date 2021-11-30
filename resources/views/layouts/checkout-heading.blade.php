@@ -5,7 +5,7 @@
             <?php
                 $logo = asset('uploads/logo/'.$site->logo);
             ?>
-            <img src="{{$logo}}" alt="U cafe" width="60%">
+            <img src="{{$logo}}" alt="U cafe" width="60%" class="main-logo">
             </a>
         </div>
         <div class="page-title">
@@ -49,7 +49,7 @@
                         //     $count = $cart['total'];
                         // }
                     ?>
-                    <span class="quantity-count"></span>
+                    <!--<span class="quantity-count"></span>-->
                     {{-- <p>v</p> --}}
                 </li>
             </ul>

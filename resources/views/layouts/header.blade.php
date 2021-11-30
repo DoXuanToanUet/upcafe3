@@ -2,12 +2,12 @@
 <section id="imprNoti">
     <div class="container">
         <div class="notify">
-            <span class="icon">
+            <a href="mailtto: <?=$site->email?>" class="icon">
                 <i class="fa fa-envelope"></i> {{ $site->email }}
-            </span>
-            <span class="icon">
+            </a>
+            <a href="tel: <?=$site->contact?>" class="icon">
                 <i class="fa fa-phone"></i> {{ $site->contact }}
-            </span>
+            </a>
         </div>
     </div>
 </section>
@@ -21,6 +21,7 @@
                 <img src="{{$logo}}" alt="logo" class="logo-img">
             </a>
             <ul>
+                <li><a href="{{ url('/') }}" class="<?=(isset($indexPage) && $indexPage == 1) ? 'active-nav' : ''?>">HOME</a></li>
                 <li><a href="{{ url('/cafe') }}" class="<?=(isset($pageName) && $pageName == 'cafe') ? 'active-nav' : ''?>">CAFE</a></li>
                 <li><a href="{{ url('/catering') }}" class="<?=(isset($pageName) && $pageName == 'catering') ? 'active-nav' : ''?>">CATERING</a></li>
                 @if(isset($pageName) && $pageName == 'catering'))

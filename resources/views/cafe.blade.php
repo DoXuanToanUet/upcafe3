@@ -69,7 +69,7 @@
                         <p>THURSDAY</p>
                         <p>FRIDAY</p>
                         <p>SAT & SUN</p>
-                        <p>PUBLIC</p>
+                        <p>PUBLIC HOLIDAYS</p>
                     </div>
                     <div class="col-6 contect_part12">
                         <p>8 AM - 2 PM</p>
@@ -80,6 +80,9 @@
                         <p>8 AM - 1 PM</p>
                         <p>CLOSED</p>
                     </div>
+                </div>
+                <div class="p-1">
+                    {{$site->address}}
                 </div>
             </div>
         </div>
@@ -95,9 +98,7 @@
                         <div class="promise_content text-center">
                             <h3>MADE WITH AROHA</h3>
                             <h2>OUR CAFE MENU</h2>
-                            <p class="promise_contentp">Enjoy breakfast, lunch and dinner in our cosy cafe or to take
-                                away. Including guilt and gluten-free plus vegetarian options. Selected beer, wine and
-                                cocktails plus great coffee await.</p>
+                            <p class="promise_contentp">Enjoy breakfast, lunch and dinner in our cosy cafe or to takeout. Our meals also include some gluten-free and vegetarian options. Selected beer, wine, cocktails and great coffee await</p>
                         </div>
                     </div>
                     <div class="col-lg-3">

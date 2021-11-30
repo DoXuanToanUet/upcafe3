@@ -75,7 +75,7 @@ $notification_header = true; ?>
                         <p>THURSDAY</p>
                         <p>FRIDAY</p>
                         <p>SAT & SUN</p>
-                        <p>PUBLIC</p>
+                        <p>PUBLIC HOLIDAYS</p>
                     </div>
                     <div class="col-6 contect_part12">
                         <p>8 AM - 2 PM</p>
@@ -86,6 +86,9 @@ $notification_header = true; ?>
                         <p>8 AM - 1 PM</p>
                         <p>CLOSED</p>
                     </div>
+                </div>
+                <div class="p-1">
+                    {{$site->address}}
                 </div>
             </div>
         </div>
@@ -143,7 +146,7 @@ $notification_header = true; ?>
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6">
                         <div class="promise_content text-center">
-                            <h3>DINE IN or TAKEAWAY</h3>
+                            <h3>DINE IN or TAKEOUT</h3>
                             <h2>OUR CAFE</h2>
                         </div>
                     </div>
@@ -233,16 +236,16 @@ $notification_header = true; ?>
             <div class="row">
                 <div class="col-lg-7 about_content_lrt">
                     <div class="about_content">
-                        <p>FROM HUMBLE BEGINNINGS TO A THRIVING CAFE</p>
+                        <p>FROM HUMBLE BEGINNINGS TO A THRIVING CAFE AND CATERING BUSINESS</p>
                         <h2>A PASSION FOR FOOD AND SERVICE</h2>
                         <p class="about-p2">At Up Cafe we’re passionate about what we do.
-                        We serve breakfast, lunch and dinner, great coffee as well as selected beers, wines and cocktails.
+                        We serve great coffee, breakfast, lunch and dinner and also operate a fully licenced bar.
 
-                        Open for catering and private functions 7 days a week, including public holidays, we take the stress out of organising your next birthday party, ladies night or company event.
+                        Together with catering and private events, we are open 7 days a week and would love to help you take the stress out of organising your next birthday party, ladies night or company event.
 
-                        We look forward to sharing our cosy cafe, great food and some Māori and Samoan hospitality with you.</p>
+                        We look forward to sharing our cosy cafe and venue, great food and beverages as well as a mixture of Māori and Samoan hospitality with you.</p>
                         <p class="about-p3">
-                            Lisa Hawkins & Aaron Paul
+                      
                         </p>
                     </div>
                 </div>

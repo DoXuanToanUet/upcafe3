@@ -670,6 +670,33 @@
                     </div>
 				</div>
 			</div>
+			{{-- Choose select option  --}}
+			<div class="choose-option modal-body">
+				<div class="">
+					<div class="chose col-2">
+						<p>CARVERY</p>
+						<input type="number" name="carvery" id="" >
+					</div>
+					<div class="chose col-2">
+						<p>SEAFOOD</p>
+						<input type="number" name="seafood" id="">
+					</div>
+					<div class="chose col-2">
+						<p>SWEET</p>
+						<input type="number" name="sweet" id="">
+					</div>
+					<div class="chose col-2">
+						<p>HOT</p>
+						<input type="number" name="hot" id="">
+					</div>
+					<div class="chose col-2">
+						<p>SALAD</p>
+						<input type="number" name="salad" id="">
+					</div>
+				</div>
+			
+		   </label>
+			</div>
             <div class="modal-footer">
                 <input type="hidden" name="grandparent" value="dinner">
                 <input type="hidden" name="parent" id="parent">

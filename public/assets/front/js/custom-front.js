@@ -258,6 +258,15 @@ $(document).on('click', '.xmas-themed', function () {
     }
 })
 
+// Scroll left sidebar event
+$(".left-sidebar-scroll").scroll(function (){
+    var scrollCount = $(this).scrollTop();
+    if (scrollCount > 50) {
+        $('.main-logo').css('display','none');
+      } else {
+        $('.main-logo').css('display','block');
+      }
+})
 // Add event click show check item 
 $(function () {
     // showTime = $('#datetimepicker1').val();
@@ -270,3 +279,18 @@ $(function () {
     // $('#delivery-show-time').append(d);
    
 })
+
+
+// Js click Carvery will limit select 
+limit =$('.cavery-option .countSelectCarvery').html();
+countlimt = parseInt(limit);
+console.log(limit);
+$('.cavery-option input[type="checkbox"]').on('change', function(evt) {
+    console.log("carvery");
+    if($(".carvery-input:checked").length >=countlimt) {
+        
+        $(".carvery-input").not(":checked").attr("disabled",true);
+    } else{
+        $(".carvery-input").not(":checked").attr("disabled",false);
+    }
+ });
