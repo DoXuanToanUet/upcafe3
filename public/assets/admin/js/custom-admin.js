@@ -234,10 +234,16 @@ $(document).on("click", ".edit-catering", function () {
     var vegetarian = $(this).data('vegetarian');
     var gluten = $(this).data('gluten');
     var vegan = $(this).data('vegan');
+    var selectOption = $(this).data('selectoption');
 
     $('.edit-catering-modal #parent').val(parent);
     $('.edit-catering-modal #name').val(name);
     $('.edit-catering-modal #group').val(group);
+    $('.edit-catering-modal #Dcarvery').val(selectOption.carvery);
+    $('.edit-catering-modal #Dseafood').val(selectOption.seafood);
+    $('.edit-catering-modal #Dsweet').val(selectOption.sweet);
+    $('.edit-catering-modal #Dhot').val(selectOption.hot);
+    $('.edit-catering-modal #Dsalad').val(selectOption.salad);
     if (price == '-1') {
         $('.edit-catering-modal #price_on_request').prop('checked', true);
         $('.edit-catering-modal #price').prop('disabled', true);

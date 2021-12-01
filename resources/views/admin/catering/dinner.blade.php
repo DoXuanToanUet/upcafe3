@@ -61,8 +61,8 @@
 															<svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
 														</button>
 														<div class="dropdown-menu">
-															<a href="javascript:void(0)" class="dropdown-item edit-catering" data-bs-toggle="modal" data-bs-target=".edit-catering-modal" data-name="{{$d->name}}" data-content="{{$d->content}}" data-id="{{$d->id}}" data-group="{{$d->group}}" data-price="{{$d->price}}" data-parent="{{$d->parent}}" data-vegetarian="{{$d->vegetarian}}" data-gluten="{{$d->gluten}}" data-vegan="{{$d->vegan}}">Edit</a>
-															<a class="dropdown-item" onclick="destroy({{$d->id}}, '/admin/catering/destroy/{{$d->id}}', '/admin/catering/breakfast');">Delete</a>
+															<a href="javascript:void(0)" class="dropdown-item edit-catering" data-bs-toggle="modal" data-bs-target=".edit-catering-modal" data-name="{{$d->name}}" data-content="{{$d->content}}" data-id="{{$d->id}}" data-group="{{$d->group}}" data-price="{{$d->price}}" data-parent="{{$d->parent}}" data-vegetarian="{{$d->vegetarian}}" data-gluten="{{$d->gluten}}" data-vegan="{{$d->vegan}}" data-selectoption="{{ $d->max_option }}">Edit</a>
+															<a class="dropdown-item" onclick="destroy({{$d->id}}, '/admin/catering/destroy/{{$d->id}}', '/admin/catering/dinner');">Delete</a>
 														</div>
 													</div>
 												</td>
@@ -610,9 +610,32 @@
                                 <input type="checkbox" class="form-check-input" value="1" name="vegan">Vegan
                             </label>
                         </div>
+						
                     </div>
+					<h4>Select Option</h3>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">CARVERY</label>
+						<input type="number"  min="0" class="form-control input-default " name="carvery"  >
+					</div> 
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SEAFOOD</label>
+						<input type="number"  min="0"class="form-control input-default " name="seafood"  >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SWEET</label>
+						<input type="number" min="0" class="form-control input-default " name="sweet"  >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">HOT</label>
+						<input type="number"  min="0"class="form-control input-default " name="hot"  >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SALAD</label>
+						<input type="number" min="0" class="form-control input-default " name="salad"  >
+					</div>
 				</div>
 			</div>
+			
             <div class="modal-footer">
                 <input type="hidden" name="grandparent" value="dinner">
                 <input type="hidden" name="parent" id="parent">
@@ -667,36 +690,38 @@
                                 <input type="checkbox" class="form-check-input" value="1" name="vegan" id="vegan">Vegan
                             </label>
                         </div>
+						
                     </div>
+					<h4>Select Option</h3>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">CARVERY</label>
+						<input type="number" min="0" class="form-control input-default " name="carvery" id="Dcarvery" >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SEAFOOD</label>
+						<input type="number" min="0" class="form-control input-default " name="seafood" id="Dseafood" >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SWEET</label>
+						<input type="number" min="0" class="form-control input-default " name="sweet" id="Dsweet" >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">HOT</label>
+						<input type="number" min="0" class="form-control input-default " name="hot" id="Dhot" >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SALAD</label>
+						<input type="number" min="0" class="form-control input-default " name="salad" id="Dsalad"  >
+					</div>
 				</div>
 			</div>
 			{{-- Choose select option  --}}
+			{{-- @if(isset($data['main-options']) && count($data['main-options']) > 0) --}}
 			<div class="choose-option modal-body">
-				<div class="">
-					<div class="chose col-2">
-						<p>CARVERY</p>
-						<input type="number" name="carvery" id="" >
-					</div>
-					<div class="chose col-2">
-						<p>SEAFOOD</p>
-						<input type="number" name="seafood" id="">
-					</div>
-					<div class="chose col-2">
-						<p>SWEET</p>
-						<input type="number" name="sweet" id="">
-					</div>
-					<div class="chose col-2">
-						<p>HOT</p>
-						<input type="number" name="hot" id="">
-					</div>
-					<div class="chose col-2">
-						<p>SALAD</p>
-						<input type="number" name="salad" id="">
-					</div>
-				</div>
-			
-		   </label>
 			</div>
+			{{-- @endif --}}
+			
+			{{-- Modal footer --}}
             <div class="modal-footer">
                 <input type="hidden" name="grandparent" value="dinner">
                 <input type="hidden" name="parent" id="parent">

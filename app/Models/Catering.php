@@ -13,7 +13,7 @@ class Catering extends Model
 
     protected $table = 'catering';
 
-    protected $fillable = ['name', 'content', 'group', 'price', 'grandparent', 'parent', 'vegetarian', 'gluten', 'vegan'];
+    protected $fillable = ['name', 'content', 'group', 'price', 'grandparent', 'parent', 'vegetarian', 'gluten', 'vegan','max_option'];
 
     public function nestedMenu($menu, $parent){
         $data = [];

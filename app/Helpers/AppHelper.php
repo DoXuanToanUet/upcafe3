@@ -13,5 +13,6 @@ class AppHelper
     public function site(){
         $data = Site::first();
         return $data;
-    }   
+    } 
+    
 }

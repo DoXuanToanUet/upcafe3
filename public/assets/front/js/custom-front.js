@@ -196,10 +196,19 @@ $(document).on('click', '.check-border-input', function () {
 
 // Dinner event check border
 $(document).on('click', '.check-dinner-input', function () {
+   
     if($(this).is(":checked")) {
         $('.check-dinner-input').parent().parent().parent().parent().parent().removeClass('border-custom');
         $(this).parent().parent().parent().parent().parent().toggleClass('border-custom');
+        // $('#menu').trigger("reset");
+        $('.form-check-input').attr("disabled",false);
+        $('.form-check-input.carvery-input').prop('checked',false);
+        $('.form-check-input.hot-input').prop('checked',false);
+        $('.form-check-input.seafood-input').prop('checked',false);
+        $('.form-check-input.salad-input').prop('checked',false);
+        $('.form-check-input.sweet-input').prop('checked',false);
     }
+
 })
 $(document).on('click', '.setup-dinner-radio', function () {
     if($(this).is(":checked")) {
@@ -282,15 +291,95 @@ $(function () {
 
 
 // Js click Carvery will limit select 
-limit =$('.cavery-option .countSelectCarvery').html();
-countlimt = parseInt(limit);
-console.log(limit);
-$('.cavery-option input[type="checkbox"]').on('change', function(evt) {
-    console.log("carvery");
-    if($(".carvery-input:checked").length >=countlimt) {
+// limit =$('.cavery-option .countSelectCarvery').html();
+// countlimt = parseInt(limit);
+// console.log(limit);
+
+// $('.cavery-option input[type="checkbox"]').on('change', function(evt) {
+//     // console.log("carvery");
+//     limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+//     countlimit = parseInt(limit);
+//     if($(".option-dinner0 .carvery-input:checked").length >=countlimit) {
         
-        $(".carvery-input").not(":checked").attr("disabled",true);
-    } else{
-        $(".carvery-input").not(":checked").attr("disabled",false);
-    }
- });
+//         $(".option-dinner0 .carvery-input").not(":checked").attr("disabled",true);
+//     } else{
+//         $(".option-dinner0 .carvery-input").not(":checked").attr("disabled",false);
+//     }
+//  });
+function checkNoneSelect(input){
+    $(input).each(function (){
+        count = $(input).find('.countSelectDinner').html();
+        intCount = parseInt(count);
+        
+        if(intCount == 0){
+            console.log("count");
+            $(this).find('input[type="checkbox"]').attr("disabled",true);
+        }
+    })  
+}
+checkNoneSelect('.cavery-option');
+checkNoneSelect('.hot-option');
+checkNoneSelect('.seafood-option');
+checkNoneSelect('.salad-option');
+checkNoneSelect('.sweet-option');
+ function countSelectDinner(input){
+    
+    $(input).each(function (){
+       
+        $(this).on('change', function(){
+            limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+            countlimit = parseInt(limit);
+           countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
+
+            //  Other case  
+           if(countLengthSelect >= countlimit){
+               $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
+           }else{
+               $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",false);
+           }
+        })
+    })
+ }
+ countSelectDinner('.cavery-option input[type="checkbox"]');
+ countSelectDinner('.hot-option input[type="checkbox"]');
+ countSelectDinner('.seafood-option input[type="checkbox"]');
+ countSelectDinner('.salad-option input[type="checkbox"]');
+ countSelectDinner('.sweet-option input[type="checkbox"]');
+//  $('.cavery-option input[type="checkbox"]').each(function (){
+//      $(this).on('change', function(){
+//          limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+//          countlimit = parseInt(limit);
+//         countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
+//         if(countLengthSelect >= countlimit){
+//             $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
+//         }else{
+//             $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",false);
+//         }
+//      } )
+//  })
+ 
+//  $('.option-dinner1 .cavery-option input[type="checkbox"]').on('change', function(evt) {
+//     limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+//     countlimit = parseInt(limit);
+//     if($(".option-dinner1 .carvery-input:checked").length >=countlimit) {
+        
+//         $(".option-dinner1 .carvery-input").not(":checked").attr("disabled",true);
+//     } else{
+//         $(".option-dinner1 .carvery-input").not(":checked").attr("disabled",false);
+//     }
+//  });
+
+ 
+//  $('.option-dinner0 .hot-option input[type="checkbox"]').on('change', function(evt) {
+//     console.log("carvery");
+//     limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+//     countlimit = parseInt(limit);
+//     console.log(countlimit);
+//     if($(".option-dinner0 .hot-input:checked").length >=countlimit) {
+        
+//         $(".option-dinner0 .hot-input").not(":checked").attr("disabled",true);
+//     } else{
+//         $(".option-dinner0 .hot-input").not(":checked").attr("disabled",false);
+//     }
+//  });
+
