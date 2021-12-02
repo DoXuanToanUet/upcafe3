@@ -17,17 +17,20 @@
                         <div class="container-fluid">
                             <div class="row d-flex align-items-start">
                             <div class="col-lg-8 col-md-12 col-12 row">
+                                {{-- {{ dd($data)}} --}}
                                     @if(isset($data) && isset($data['main-options']) && count($data['main-options']) > 0)
                                         <?php
-                                            $count = count($data['main-options']) / 2;
+                                            $count = count($data['main-options']);
                                             $exact = count($data['main-options']);
+                                            // dd($count);
                                         ?>
-                                        <div class="col-lg-6 col-md-12 col-12">
+                                       
                                             @for($i=0;$i<$count;$i++)
+                                            <div class="col-lg-6 col-md-12 col-12">
                                                 <div class="option3-section">
                                                     <div class="row" style="margin-top: 44px;">
                                                         <div class="col-12">
-                                                            <div class="full full-custom">
+                                                            <div class="full full-custom" style="background-color: #fff; border: none;">
                                                                 <div class="head " style="background-color: #F4F4F4; border: none;">
                                                                     <div class="justify-content-between d-flex">
                                                                         <div class="">
@@ -57,98 +60,56 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card-footer d-none">
-                                                                    <p>toan la toi</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endfor
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-12">
-                                            @for($i=$count;$i<$exact;$i++)
-                                                <div class="option3-section">
-                                                    <div class="row" style="margin-top: 44px;">
-                                                        <div class="col-12">
-                                                            <div class="full full-custom">
-                                                                <div class="head " style="background-color: #F4F4F4; border: none;">
-                                                                    <div class="justify-content-between d-flex">
-                                                                        <div class="">
-                                                                            <h4>{{$data['main-options'][$i]['name']}}</h4>
-                                                                        </div>
-                                                                        <div class="">
-                                                                            <div class="box3 float-right">
-                                                                                <input class="form-check-input check-border-input check-lunch-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                <div class="setup setup-{{$data['main-options'][$i]['id']}}" style="background:#fff;">
+                                                                    @if(isset($data) && isset($data['salad']) && count($data['salad']) > 0) 
+                                                                        <div class="additional-section">
+                                                                            <div class="full  pb-5" style="background-color: white; margin:0px 30px;">
+                                                                                <div class="bever dinner-bavver" style="margin-top: 12px;">
+                                                                                    <div class="row">
+                                                                                        {{-- <div class="col-md-10 p-0">
+                                                                                            <h3 style="font-weight: bold;">SALAD OPTIONS</h3>
+                                                                                        </div>
+                                                                                        <div class="col-md-2">
+                                                                                            <img src="/assets/front/assets/img/box.png" class="float-right" width="50px">
+                                                                                        </div> --}}
+                                                                                    </div>
+                        
+                                                                                    @foreach($data['salad'] as $d)
+                                                                                        <div class="form-check mt-5">
+                                                                                            <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]">
+                                                                                            <label class="form-check-label items-name" for="flexCheckDefault">
+                                                                                                {{$d->name}}
+                                                                                            </label>
+                                                                                            <label class="form-check-label items-price" for="flexCheckDefault">
+                                                                                                $ <?=number_format($d->price,2)?>
+                                                                                            </label>
+                                                                                        </div>
+                        
+                                                                                    @endforeach
+                        
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>     
+                                                                    @endif
+                                                                    <div class="row  justify-content-center">
+                                                                        <div class="main-selction-4  col-lg-6"  style="margin-bottom:70px">
+                                                                            <div class="button text-center ">
+                                                                                <button type="submit" class="btn btn-outline-success view-my-selection-button" disabled> VIEW MY SELECTION</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="p-2" style="background-color: white; border: none !important; border-radius: none !important; " >
-                                                                    <div class="content">
-                                                                        {!! $data['main-options'][$i]['content'] !!}
-                                                                    </div>
-                                                                    <div class="card_end_icon d-flex mt-4 justify-content-end">
-                                                                        <div class="card_icons1 text-center same-one tooltip-div">
-                                                                            <img src="/assets/front/assets/img/green-1.png" alt="man icon">
-                                                                            <h6 class="ml-2 mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px; font-weight: 500;">{{$data['main-options'][$i]['group']}}</h6>
-                                                                            <span class="tooltiptext">Minimum Order</span>
-                                                                        </div>
-                                                                        <div class="card_icons2  text-center  same-one tooltip-div">
-                                                                            <img src="/assets/front/assets/img/green-2.png" alt="man icon">
-                                                                            <h6 class="mt-1" style="color: #8EC39B;; font-weight: 500; font-size: 14px;">$ <?=number_format($data['main-options'][$i]['price'],2)?></h6>
-                                                                            <span class="tooltiptext">Price Per Person</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="card-footer d-none">
-                                                                    <p>toan la toi</p>
-                                                
-                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endfor
-                                        </div>
-                                    @endif
-                                </div>
-                                @if(isset($data) && isset($data['salad']) && count($data['salad']) > 0)
-                                    <div class="col-lg-4 col-md-12 col-12">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="additional-section">
-                                                    <div class="full  p-3 pb-5" style="background-color: white;">
-                                                        <div class="bever dinner-bavver" style="margin-top: 12px;">
-                                                            <div class="row" style="margin-top: 2.3rem;">
-                                                                <div class="col-md-10 p-0">
-                                                                    <h3 style="font-weight: bold;">SALAD OPTIONS</h3>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <img src="/assets/front/assets/img/box.png" class="float-right" width="50px">
-                                                                </div>
-                                                            </div>
-
-                                                            @foreach($data['salad'] as $d)
-                                                                <div class="form-check mt-5">
-                                                                    <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]">
-                                                                    <label class="form-check-label items-name" for="flexCheckDefault">
-                                                                        {{$d->name}}
-                                                                    </label>
-                                                                    <label class="form-check-label items-price" for="flexCheckDefault">
-                                                                        $ <?=number_format($d->price,2)?>
-                                                                    </label>
-                                                                </div>
-
-                                                            @endforeach
-
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                @endif
+                                            @endfor
+                                        
+                                       
+                                    @endif
+                                </div>
+                              
                             </div>
 
 
@@ -163,13 +124,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 col-md-12 col-12 row">
-                                <div class="main-selction-4  pb-5 mt-6">
-                                    <div class="button text-center ">
-                                        <button type="submit" class="btn btn-outline-success view-my-selection-button" disabled> VIEW MY SELECTION</button>
-                                    </div>
-                                </div>
-                            </div>
+                
                             </div>
 
                         </div>

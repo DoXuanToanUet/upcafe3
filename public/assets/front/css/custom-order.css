@@ -873,6 +873,14 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
 }
+.dinner-bavver .form-check{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.dinner-bavver .form-check-label.items-name{
+    width: 75%;
+}
 @media screen and  (min-width:1368px){
 
     .navbar .page-title{

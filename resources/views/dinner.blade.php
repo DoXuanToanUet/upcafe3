@@ -556,7 +556,7 @@
                                     @endif
                                 </div>
                                 @if(isset($data) && isset($data['beverage']) && count($data['beverage']) > 0)
-                                    <div class="col-lg-4 col-md-4 col-12 option3-section">
+                                    <div class="col-lg-4 col-md-12 col-12 option3-section">
                                         <div class="row marign-top-44">
                                             <div class="col-12">
                                                 <div class="additional-section">
