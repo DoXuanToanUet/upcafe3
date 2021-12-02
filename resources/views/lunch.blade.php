@@ -35,7 +35,7 @@
                                                                         </div>
                                                                         <div class="">
                                                                             <div class="box3 float-right">
-                                                                                <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options">
+                                                                                <input class="form-check-input check-border-input check-lunch-input  " type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -57,6 +57,9 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="card-footer d-none">
+                                                                    <p>toan la toi</p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -76,7 +79,7 @@
                                                                         </div>
                                                                         <div class="">
                                                                             <div class="box3 float-right">
-                                                                                <input class="form-check-input check-border-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                                <input class="form-check-input check-border-input check-lunch-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -97,6 +100,10 @@
                                                                             <span class="tooltiptext">Price Per Person</span>
                                                                         </div>
                                                                     </div>
+                                                                </div>
+                                                                <div class="card-footer d-none">
+                                                                    <p>toan la toi</p>
+                                                
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -325,6 +332,26 @@
             } else {
                 $('.view-my-selection-button').prop('disabled', true);
             }
+        });
+         $(function () {
+            const $body = $('body');
+           
+            $body.on('click', '.check-lunch-input', function (event) {
+                $('.setup').hide();
+                $('.setup-'+$(this).val()).show();
+                // $(this).each(function () {
+                //     // $(this).closest('.option3-section').find('.card-footer').addClass('d-none');
+                //    if ( $(this).is(":checked")  ){
+                //        console.log("checked");
+                //        $(this).closest('.option3-section').find('.card-footer').removeClass('d-none');
+                //    }else{
+                //         $(this).closest('.option3-section').find('.card-footer').addClass('d-none');
+                //         console.log("not checked");
+                //    }
+                // });
+                $()
+            });
+
         });
     </script>
 @endsection

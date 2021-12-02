@@ -58,18 +58,18 @@
                                                                 <div class="full full-custom card" style="border:none">
                                                                     <div class="head card-header" style="background-color: #F4F4F4; border: none;">
 
-                                                                        <div class="row">
-                                                                            <div class="col-md-7">
-                                                                                <h4>{{$data['main-options'][$i]['name']}}</h4>
+                                                                        <div class="card-header-title">
+                                                                            <div class="">
+                                                                                <h4>{{ $data['main-options'][$i]['name'] }}</h4>
                                                                             </div>
-                                                                            <div class="col-md-4 text-center tooltip-div">
+                                                                            <div class="text-center tooltip-div">
                                                                                 <img src="/assets/front/assets/img/green-2.png" alt="man icon">
                                                                                 <!--<p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>-->
                                                                                 <!--<span class="tooltiptext">Minimum Order</span>                                -->
                                                                             </div>
-                                                                            <div class="col-md-1">
+                                                                            <div class="">
                                                                                 <div class="box3 float-right">
-                                                                                    <input class="form-check-input setup-radio check-dinner-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
+                                                                                    <input class="form-check-input setup-radio check-dinner-input" data-id="{{ $data['main-options'][$i]['id'] }}" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -87,38 +87,39 @@
                                                                     </div>
 
                                                                     @if(isset($data['setup']) && count($data['setup']) > 0)
-
+                                                                        
                                                                         <div class="card-footer  setup setup-{{$data['main-options'][$i]['id']}}" style="background: rgba(142, 195, 155, 0.2); border:none;">
-                                                                            <div class="" id="">
-                                                                                <div class="main-content">
+                                                                            <h4 class="text-center" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
+                                                                            <div class="dinner-card" id="">
+                                                                                <div class="">
                                                                                     <div class="dinner-cafe-section py-4">
                                                                                         
-                                                                                        <div class="row">
-                                                                                            <div class="col-lg-12 col-12">
+                                                                                        <div class="">
+                                                                                            <div class="">
                                                                                                 <!-- option 1 -->
                                                                                                 @if(isset($data) && isset($data['carvery']) && count($data['carvery']))
                                                                                                     <div class="option3-section dinner">
-                                                                                                        <div class="row" style="margin-top: 44px;">
-                                                                                                            <div class="col-12">
-                                                                                                                <div class="full cavery-option">
+                                                                                                        <div class="" style="">
+                                                                                                            <div class="">
+                                                                                                                <div class="cavery-option">
                                                                                                                     <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                         <div class="row">
-                                                                                                                            <div class="col">
-                                                                                                                                <h4>CARVERY</h4>
+                                                                                                                            <div class="col select-title">
+                                                                                                                                <h4 class="card-title-font">CARVERY</h4>
                                                                                                                                 {{-- {{ dd($data['main-options'][$i]['max_option'] )  }} --}}
                                                                                                                                 @php
                                                                                                                                     $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                                     
                                                                                                                                 @endphp
-                                                                                                                                <p>
-                                                                                                                                    SELECT : 
-                                                                                                                                    <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->carvery : '' }}</span>
-                                                                                                                                </p>
-                                                                                                       
+                                                                                                                                 <span class="card-title-font">
+                                                                                                                                    SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                                    <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->carvery : '' }}</span>
+                                                                                                                                </span>
+
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                         @foreach($data['carvery'] as $d)
                                                                                                                             <div class="check-1">
                                                                                                                                 <input class="form-check-input carvery-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}
@@ -131,25 +132,60 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
-                                                                
+                                                                                                @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
+                                                                                                <div class="option3-section dinner">
+                                                                                                    <div class="" style="margin-top: 10px;">
+                                                                                                        <div class="">
+                                                                                                            <div class="seafood-option">
+                                                                                                                <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col select-title">
+                                                                                                                            <h4 class="card-title-font">SEAFOOD OPTIONS</h4>
+                                                                                                                            @php
+                                                                                                                                $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                            
+                                                                                                                            @endphp
+                                                                                                                             <span class="card-title-font">
+                                                                                                                                SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                                <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->seafood : '' }}</span>
+                                                                                                                            </span>
+                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
+                                                                                                                    @foreach($data['sea-food'] as $d)
+                                                                                                                        <div class="check-1">
+                                                                                                                            <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                        </div>
+                                                                                                                    @endforeach
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            @endif   
                                                                                                 @if(isset($data) && isset($data['hot']) && count($data['hot']))
                                                                                                     <div class="option3-section dinner">
-                                                                                                        <div class="row" style="margin-top: 44px;">
-                                                                                                            <div class="col-12">
-                                                                                                                <div class="full hot-option">
+                                                                                                        <div class="" style="margin-top: 10px;">
+                                                                                                            <div class="">
+                                                                                                                <div class=" hot-option">
                                                                                                                     <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                         <div class="row">
-                                                                                                                            <div class="col">
-                                                                                                                                <h4>HOT OPTIONS</h4>
+                                                                                                                            <div class="col select-title">
+                                                                                                                                <h4 class="card-title-font">HOT OPTIONS</h4>
                                                                                                                                 @php
                                                                                                                                     $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                                 
                                                                                                                                 @endphp
-                                                                                                                                 <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->hot : '' }}</span>
+                                                                                                                                  <span class="card-title-font">
+                                                                                                                                    SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                                    <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->hot : '' }}</span>
+                                                                                                                                </span>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                         @foreach($data['hot'] as $d)
                                                                                                                             <div class="check-1">
                                                                                                                                 <input class="form-check-input hot-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="hot[]"> &nbsp; <span>{{$d->name}}
@@ -163,57 +199,31 @@
                                                                                                 @endif
                                                                                             </div>
                                                                 
-                                                                                            <div class="col-lg-12 col-12">
-                                                                                                <!-- option 1 -->
-                                                                                                @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
-                                                                                                    <div class="option3-section dinner">
-                                                                                                        <div class="row" style="margin-top: 44px;">
-                                                                                                            <div class="col-12">
-                                                                                                                <div class="full seafood-option">
-                                                                                                                    <div class="head " style="background-color: #F4F4F4; ">
-                                                                                                                        <div class="row">
-                                                                                                                            <div class="col">
-                                                                                                                                <h4>SEAFOOD OPTIONS</h4>
-                                                                                                                                @php
-                                                                                                                                    $maxOption = json_decode($data['main-options'][$i]['max_option']);
-                                                                                                                                
-                                                                                                                                @endphp
-                                                                                                                                <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->seafood : '' }}</span>
+                                                                                            <div class="">
                                                                                                 
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                                                                                        @foreach($data['sea-food'] as $d)
-                                                                                                                            <div class="check-1">
-                                                                                                                                <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
-                                                                                                                            </div>
-                                                                                                                        @endforeach
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                @endif
+                                                                                             
                                                                 
                                                                                                 @if(isset($data) && isset($data['salad']) && count($data['salad']))
                                                                                                     <div class="option3-section dinner">
-                                                                                                        <div class="row" style="margin-top: 44px;">
-                                                                                                            <div class="col-12">
-                                                                                                                <div class="full salad-option">
+                                                                                                        <div class="" style="margin-top: 10px;">
+                                                                                                            <div class="">
+                                                                                                                <div class="salad-option">
                                                                                                                     <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                         <div class="row">
-                                                                                                                            <div class="col">
-                                                                                                                                <h4>SALAD OPTIONS</h4>
+                                                                                                                            <div class="col select-title">
+                                                                                                                                <h4 class="card-title-font">SALAD OPTIONS</h4>
                                                                                                                                 @php
                                                                                                                                     $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                                 
                                                                                                                                 @endphp
-                                                                                                                                 <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->salad : '' }}</span>
+                                                                                                                                  <span class="card-title-font">
+                                                                                                                                    SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                                    <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->salad : '' }}</span>
+                                                                                                                                </span>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                         @foreach($data['salad'] as $d)
                                                                                                                             <div class="check-1">
                                                                                                                                 <input class="form-check-input salad-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]"> &nbsp; <span>{{$d->name}}
@@ -227,26 +237,29 @@
                                                                                                 @endif
                                                                                             </div>
                                                                 
-                                                                                            <div class="col-lg-12 col-12">
+                                                                                            <div class="">
                                                                                                 <!-- option 1 -->
                                                                                                 @if(isset($data) && isset($data['sweet']) && count($data['sweet']))
                                                                                                     <div class="option3-section dinner">
-                                                                                                        <div class="row" style="margin-top: 44px;">
-                                                                                                            <div class="col-12">
-                                                                                                                <div class="full sweet-option">
+                                                                                                        <div class="" style="margin-top: 10px;">
+                                                                                                            <div class="">
+                                                                                                                <div class="sweet-option">
                                                                                                                     <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                         <div class="row">
-                                                                                                                            <div class="col">
-                                                                                                                                <h4>SWEET OPTIONS</h4>
+                                                                                                                            <div class="col select-title">
+                                                                                                                                <h4 class="card-title-font">SWEET OPTIONS</h4>
                                                                                                                                 @php
                                                                                                                                     $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                                 
                                                                                                                                 @endphp
-                                                                                                                                 <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->sweet : '' }}</span>
+                                                                                                                                <span class="card-title-font">
+                                                                                                                                    SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                                    <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->sweet : '' }}</span>
+                                                                                                                                </span>
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                         @foreach($data['salad'] as $d)
                                                                                                                             <div class="check-1">
                                                                                                                                 <input class="form-check-input sweet-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sweet[]"> &nbsp; <span>{{$d->name}}
@@ -264,7 +277,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
+                                                                            
                                                                             @foreach($data['setup'] as $s)
                                                                                 @if(($data['main-options'][$i]['name'] == 'Dinner | Option 1' && ($s->name == '1. FULL BUFFET SETUP P/Person' || $s->name == '1. SERVES IN DISPOSABLE FOIL TRAY P/Person')) || 
                                                                                 ($data['main-options'][$i]['name'] == 'Dinner | Option 2' && ($s->name == '2. FULL BUFFET SETUP P/Person' || $s->name == '2. SERVES IN DISPOSABLE FOIL TRAY P/Person')))
@@ -301,16 +314,16 @@
                                                         <div class="col-md-12">
                                                             <div class="full full-custom card " style="border:none;">
                                                                 <div class="head card-header" style="background-color: #F4F4F4; ">
-                                                                    <div class="row">
-                                                                        <div class="col-md-7">
+                                                                    <div class="card-header-title">
+                                                                        <div class="">
                                                                             <h4>{{$data['main-options'][$i]['name']}}</h4>
                                                                         </div>
-                                                                        <div class="col-md-4 text-center tooltip-div">
+                                                                        <div class=" text-center tooltip-div">
                                                                             <img src="/assets/front/assets/img/green-2.png" alt="man icon">
                                                                             <!--<p class="mb-0" style="color: #8ec39b;">$ <?=number_format($data['main-options'][$i]['price'],2)?> </p>-->
                                                                             <!--<span class="tooltiptext">Minimum Order</span>-->
                                                                         </div>
-                                                                        <div class="col-md-1">
+                                                                        <div class="">
                                                                             <div class="box3 float-right">
                                                                                 <input class="form-check-input setup-radio check-dinner-input" type="radio" value="{{$data['main-options'][$i]['id']}}" id="flexCheckChecked" name="main-options" >
                                                                             </div>
@@ -327,36 +340,37 @@
                                                                 </div>
 
                                                                 <div class="card-footer border-0 setup setup-{{$data['main-options'][$i]['id']}}" style="background: rgba(142, 195, 155, 0.2);">
-                                                                    <div class="" id="">
-                                                                        <div class="main-content">
+                                                                    <h4 class="text-center" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
+                                                                    <div class="dinner-card" id="">
+                                                                        <div class="">
                                                                             <div class="dinner-cafe-section py-4">
                                                                                 
-                                                                                <div class="row">
-                                                                                    <div class="col-lg-12 col-12">
+                                                                                <div class="">
+                                                                                    <div class="">
                                                                                         <!-- option 1 -->
                                                                                         @if(isset($data) && isset($data['carvery']) && count($data['carvery']))
                                                                                             <div class="option3-section dinner">
-                                                                                                <div class="row" style="margin-top: 44px;">
-                                                                                                    <div class="col-12">
-                                                                                                        <div class="full cavery-option">
+                                                                                                <div class="" style="">
+                                                                                                    <div class="">
+                                                                                                        <div class="cavery-option">
                                                                                                             <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                 <div class="row">
-                                                                                                                    <div class="col">
-                                                                                                                        <h4>CARVERY</h4>
+                                                                                                                    <div class="col select-title">
+                                                                                                                        <h4 class="card-title-font">CARVERY</h4>
                                                                                                                         {{-- {{ dd($data['main-options'][$i]['max_option'] )  }} --}}
                                                                                                                         @php
                                                                                                                             $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                             
                                                                                                                         @endphp
-                                                                                                                        <p>
-                                                                                                                            SELECT : 
-                                                                                                                            <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->carvery : '' }}</span>
-                                                                                                                        </p>
-                                                                                               
+                                                                                                                         <span class="card-title-font">
+                                                                                                                            SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                            <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->carvery : '' }}</span>
+                                                                                                                        </span>
+
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                 @foreach($data['carvery'] as $d)
                                                                                                                     <div class="check-1">
                                                                                                                         <input class="form-check-input carvery-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}
@@ -369,25 +383,60 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                         @endif
-                                                        
+                                                                                        @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
+                                                                                        <div class="option3-section dinner">
+                                                                                            <div class="" style="margin-top: 10px;">
+                                                                                                <div class="">
+                                                                                                    <div class="seafood-option">
+                                                                                                        <div class="head " style="background-color: #F4F4F4; ">
+                                                                                                            <div class="row">
+                                                                                                                <div class="col select-title">
+                                                                                                                    <h4 class="card-title-font">SEAFOOD OPTIONS</h4>
+                                                                                                                    @php
+                                                                                                                        $maxOption = json_decode($data['main-options'][$i]['max_option']);
+                                                                                                                    
+                                                                                                                    @endphp
+                                                                                                                     <span class="card-title-font">
+                                                                                                                        SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                        <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->seafood : '' }}</span>
+                                                                                                                    </span>
+                                                                                    
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
+                                                                                                            @foreach($data['sea-food'] as $d)
+                                                                                                                <div class="check-1">
+                                                                                                                    <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                </div>
+                                                                                                            @endforeach
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @endif   
                                                                                         @if(isset($data) && isset($data['hot']) && count($data['hot']))
                                                                                             <div class="option3-section dinner">
-                                                                                                <div class="row" style="margin-top: 44px;">
-                                                                                                    <div class="col-12">
-                                                                                                        <div class="full hot-option">
+                                                                                                <div class="" style="margin-top: 10px;">
+                                                                                                    <div class="">
+                                                                                                        <div class=" hot-option">
                                                                                                             <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                 <div class="row">
-                                                                                                                    <div class="col">
-                                                                                                                        <h4>HOT OPTIONS</h4>
+                                                                                                                    <div class="col select-title">
+                                                                                                                        <h4 class="card-title-font">HOT OPTIONS</h4>
                                                                                                                         @php
                                                                                                                             $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                         
                                                                                                                         @endphp
-                                                                                                                         <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->hot : '' }}</span>
+                                                                                                                          <span class="card-title-font">
+                                                                                                                            SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                            <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->hot : '' }}</span>
+                                                                                                                        </span>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                 @foreach($data['hot'] as $d)
                                                                                                                     <div class="check-1">
                                                                                                                         <input class="form-check-input hot-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="hot[]"> &nbsp; <span>{{$d->name}}
@@ -401,57 +450,31 @@
                                                                                         @endif
                                                                                     </div>
                                                         
-                                                                                    <div class="col-lg-12 col-12">
-                                                                                        <!-- option 1 -->
-                                                                                        @if(isset($data) && isset($data['sea-food']) && count($data['sea-food']))
-                                                                                            <div class="option3-section dinner">
-                                                                                                <div class="row" style="margin-top: 44px;">
-                                                                                                    <div class="col-12">
-                                                                                                        <div class="full seafood-option">
-                                                                                                            <div class="head " style="background-color: #F4F4F4; ">
-                                                                                                                <div class="row">
-                                                                                                                    <div class="col">
-                                                                                                                        <h4>SEAFOOD OPTIONS</h4>
-                                                                                                                        @php
-                                                                                                                            $maxOption = json_decode($data['main-options'][$i]['max_option']);
-                                                                                                                        
-                                                                                                                        @endphp
-                                                                                                                        <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->seafood : '' }}</span>
+                                                                                    <div class="">
                                                                                         
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
-                                                                                                                @foreach($data['sea-food'] as $d)
-                                                                                                                    <div class="check-1">
-                                                                                                                        <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
-                                                                                                                    </div>
-                                                                                                                @endforeach
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        @endif
+                                                                                     
                                                         
                                                                                         @if(isset($data) && isset($data['salad']) && count($data['salad']))
                                                                                             <div class="option3-section dinner">
-                                                                                                <div class="row" style="margin-top: 44px;">
-                                                                                                    <div class="col-12">
-                                                                                                        <div class="full salad-option">
+                                                                                                <div class="" style="margin-top: 10px;">
+                                                                                                    <div class="">
+                                                                                                        <div class="salad-option">
                                                                                                             <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                 <div class="row">
-                                                                                                                    <div class="col">
-                                                                                                                        <h4>SALAD OPTIONS</h4>
+                                                                                                                    <div class="col select-title">
+                                                                                                                        <h4 class="card-title-font">SALAD OPTIONS</h4>
                                                                                                                         @php
                                                                                                                             $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                         
                                                                                                                         @endphp
-                                                                                                                         <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->salad : '' }}</span>
+                                                                                                                          <span class="card-title-font">
+                                                                                                                            SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                            <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->salad : '' }}</span>
+                                                                                                                        </span>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                 @foreach($data['salad'] as $d)
                                                                                                                     <div class="check-1">
                                                                                                                         <input class="form-check-input salad-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="salad[]"> &nbsp; <span>{{$d->name}}
@@ -465,26 +488,29 @@
                                                                                         @endif
                                                                                     </div>
                                                         
-                                                                                    <div class="col-lg-12 col-12">
+                                                                                    <div class="">
                                                                                         <!-- option 1 -->
                                                                                         @if(isset($data) && isset($data['sweet']) && count($data['sweet']))
                                                                                             <div class="option3-section dinner">
-                                                                                                <div class="row" style="margin-top: 44px;">
-                                                                                                    <div class="col-12">
-                                                                                                        <div class="full sweet-option">
+                                                                                                <div class="" style="margin-top: 10px;">
+                                                                                                    <div class="">
+                                                                                                        <div class="sweet-option">
                                                                                                             <div class="head " style="background-color: #F4F4F4; ">
                                                                                                                 <div class="row">
-                                                                                                                    <div class="col">
-                                                                                                                        <h4>SWEET OPTIONS</h4>
+                                                                                                                    <div class="col select-title">
+                                                                                                                        <h4 class="card-title-font">SWEET OPTIONS</h4>
                                                                                                                         @php
                                                                                                                             $maxOption = json_decode($data['main-options'][$i]['max_option']);
                                                                                                                         
                                                                                                                         @endphp
-                                                                                                                         <span class="countSelectDinner">{{ isset( $maxOption) ?  $maxOption->sweet : '' }}</span>
+                                                                                                                        <span class="card-title-font">
+                                                                                                                            SELECT <span class="card-title-font" style="padding:0px 4px;">|</span>
+                                                                                                                            <span class="countSelectDinner card-title-font">{{ isset( $maxOption) ?  $maxOption->sweet : '' }}</span>
+                                                                                                                        </span>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"  >
+                                                                                                            <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                 @foreach($data['salad'] as $d)
                                                                                                                     <div class="check-1">
                                                                                                                         <input class="form-check-input sweet-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sweet[]"> &nbsp; <span>{{$d->name}}
@@ -502,7 +528,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4>
+                                                                    {{-- <h4 class="text-center p-2" style="font-size: 26px; line-height: 45px;">PLEASE SELECT</h4> --}}
                                                                     @foreach($data['setup'] as $s)
                                                                         @if(($data['main-options'][$i]['name'] == 'Dinner | Option 3' && ($s->name == '3. FULL BUFFET SETUP P/Person' || $s->name == '3. SERVES IN DISPOSABLE FOIL TRAY P/Person')) || 
                                                                                 ($data['main-options'][$i]['name'] == 'Dinner | Option 4' && ($s->name == '4. FULL BUFFET SETUP P/Person' || $s->name == '4. SERVES IN DISPOSABLE FOIL TRAY P/Person')))
@@ -629,16 +655,57 @@
 
 @section('scripts')
     <script>
-        $('body').on('change', '.form-check-input', function () {
-            if ($('.form-check-input:checked').length > 0) {
-                if ($('.view-my-selection-button').prop('disabled')) {
-                    $('.view-my-selection-button').prop('disabled', false);
-                }
-            } else {
-                $('.view-my-selection-button').prop('disabled', true);
-            }
-        });
+        // $.noConflict;
+        function findSumSelect(param,input){
+           return  $(param).closest('.option3-section').find(input).html();
+        }
+        
+        var countCheckbox = 0;
+        // let classId = '';
+        countButton = 0;
+        // var dxt;
+        // $('.setup-dinner-radio').on('click', function () {
+        //     if($(this).is(":checked")){
+        //         dxt=1;
+        //     }
+        // })
+        $('body').on('change', '.check-dinner-input', function () {
+            // let test = [];
+            // classId = `option-${$(this).attr('data-id')}`;
+            // $(this).closest('.option3-section').find('.setup-dinner-radio').addClass(classId);
+            countCarvery=findSumSelect(this,'.cavery-option .countSelectDinner');
+            countHot=findSumSelect(this,'.hot-option .countSelectDinner');
+            countSalad=findSumSelect(this,'.salad-option .countSelectDinner');
+            countSeafood=findSumSelect(this,'.seafood-option .countSelectDinner');
+            countSweet=findSumSelect(this,'.sweet-option .countSelectDinner');
+            
+            countSum = parseInt(countCarvery) +  parseInt(countHot) +  parseInt(countSalad)+  parseInt(countSeafood) +  parseInt(countSweet)
 
+            $(this).closest('.option3-section').find('.dinner-card .form-check-input').on('change',function(){
+               
+                if($(this).is(":checked")){
+                    countCheckbox=countCheckbox+1;
+                }else{
+                    countCheckbox=countCheckbox-1;
+                }
+                // $(document).on('click', '.setup-dinner-radio',function () {
+                //     if($(this).is(":checked")){
+                //         dxt=1;
+                        
+                //     }
+                // });
+                if ( countCheckbox >= countSum  ) {
+                   
+                    if ($('.view-my-selection-button').prop('disabled')) {
+                        $('.view-my-selection-button').prop('disabled', false);
+                        }
+                    } else {
+                        $('.view-my-selection-button').prop('disabled', true);
+                    }
+            } )
+
+            
+        });
         function countSelectDinner(input){
     
             $(input).each(function (){
@@ -646,8 +713,7 @@
                 $(this).on('change', function(){
                     limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
                     countlimit = parseInt(limit);
-                countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
-
+                    countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
                     //  Other case  
                 if(countLengthSelect >= countlimit){
                     $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
@@ -662,6 +728,6 @@
         countSelectDinner('.seafood-option input[type="checkbox"]');
         countSelectDinner('.salad-option input[type="checkbox"]');
         countSelectDinner('.sweet-option input[type="checkbox"]'); 
-        });
+        
     </script>
 @endsection

@@ -622,16 +622,16 @@
 						<input type="number"  min="0"class="form-control input-default " name="seafood"  >
 					</div>
 					<div class="col-lg-2 col-md-6 col-6">
-						<label class="form-label">SWEET</label>
-						<input type="number" min="0" class="form-control input-default " name="sweet"  >
-					</div>
-					<div class="col-lg-2 col-md-6 col-6">
 						<label class="form-label">HOT</label>
 						<input type="number"  min="0"class="form-control input-default " name="hot"  >
 					</div>
 					<div class="col-lg-2 col-md-6 col-6">
 						<label class="form-label">SALAD</label>
 						<input type="number" min="0" class="form-control input-default " name="salad"  >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SWEET</label>
+						<input type="number" min="0" class="form-control input-default " name="sweet"  >
 					</div>
 				</div>
 			</div>
@@ -702,16 +702,16 @@
 						<input type="number" min="0" class="form-control input-default " name="seafood" id="Dseafood" >
 					</div>
 					<div class="col-lg-2 col-md-6 col-6">
-						<label class="form-label">SWEET</label>
-						<input type="number" min="0" class="form-control input-default " name="sweet" id="Dsweet" >
-					</div>
-					<div class="col-lg-2 col-md-6 col-6">
 						<label class="form-label">HOT</label>
 						<input type="number" min="0" class="form-control input-default " name="hot" id="Dhot" >
 					</div>
 					<div class="col-lg-2 col-md-6 col-6">
 						<label class="form-label">SALAD</label>
 						<input type="number" min="0" class="form-control input-default " name="salad" id="Dsalad"  >
+					</div>
+					<div class="col-lg-2 col-md-6 col-6">
+						<label class="form-label">SWEET</label>
+						<input type="number" min="0" class="form-control input-default " name="sweet" id="Dsweet" >
 					</div>
 				</div>
 			</div>
