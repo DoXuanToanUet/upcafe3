@@ -195,18 +195,36 @@ $(document).on('click', '.check-border-input', function () {
 })
 
 // Dinner event check border
+function checkNoneSelect(input){
+    $(input).each(function (){
+        count = $(this).find('.countSelectDinner').html();
+        intCount = parseInt(count);
+    
+        if(intCount == 0){
+            console.log($(this));
+            $(this).find('input[type="checkbox"]').prop("disabled",true);
+        }
+    })  
+    
+}
 $(document).on('click', '.check-dinner-input', function () {
    
     if($(this).is(":checked")) {
         $('.check-dinner-input').parent().parent().parent().parent().parent().removeClass('border-custom');
         $(this).parent().parent().parent().parent().parent().toggleClass('border-custom');
         // $('#menu').trigger("reset");
-        $('.form-check-input').attr("disabled",false);
+        $('.form-check-input').prop("disabled",false);
         $('.form-check-input.carvery-input').prop('checked',false);
         $('.form-check-input.hot-input').prop('checked',false);
         $('.form-check-input.seafood-input').prop('checked',false);
         $('.form-check-input.salad-input').prop('checked',false);
         $('.form-check-input.sweet-input').prop('checked',false);
+      
+        checkNoneSelect('.cavery-option');
+        checkNoneSelect('.hot-option');
+        checkNoneSelect('.seafood-option');
+        checkNoneSelect('.salad-option');
+        checkNoneSelect('.sweet-option');
     }
 
 })
@@ -306,45 +324,32 @@ $(function () {
 //         $(".option-dinner0 .carvery-input").not(":checked").attr("disabled",false);
 //     }
 //  });
-function checkNoneSelect(input){
-    $(input).each(function (){
-        count = $(input).find('.countSelectDinner').html();
-        intCount = parseInt(count);
-        
-        if(intCount == 0){
-            console.log("count");
-            $(this).find('input[type="checkbox"]').attr("disabled",true);
-        }
-    })  
-}
-checkNoneSelect('.cavery-option');
-checkNoneSelect('.hot-option');
-checkNoneSelect('.seafood-option');
-checkNoneSelect('.salad-option');
-checkNoneSelect('.sweet-option');
- function countSelectDinner(input){
-    
-    $(input).each(function (){
-       
-        $(this).on('change', function(){
-            limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
-            countlimit = parseInt(limit);
-           countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
 
-            //  Other case  
-           if(countLengthSelect >= countlimit){
-               $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
-           }else{
-               $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",false);
-           }
-        })
-    })
- }
- countSelectDinner('.cavery-option input[type="checkbox"]');
- countSelectDinner('.hot-option input[type="checkbox"]');
- countSelectDinner('.seafood-option input[type="checkbox"]');
- countSelectDinner('.salad-option input[type="checkbox"]');
- countSelectDinner('.sweet-option input[type="checkbox"]');
+
+//  function countSelectDinner(input){
+    
+//     $(input).each(function (){
+       
+//         $(this).on('change', function(){
+//             limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+//             countlimit = parseInt(limit);
+//            countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
+
+//             //  Other case  
+//            if(countLengthSelect >= countlimit){
+//                $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
+//            }
+//            else{
+//                $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",false);
+//            }
+//         })
+//     })
+//  }
+//  countSelectDinner('.cavery-option input[type="checkbox"]');
+//  countSelectDinner('.hot-option input[type="checkbox"]');
+//  countSelectDinner('.seafood-option input[type="checkbox"]');
+//  countSelectDinner('.salad-option input[type="checkbox"]');
+//  countSelectDinner('.sweet-option input[type="checkbox"]');
 //  $('.cavery-option input[type="checkbox"]').each(function (){
 //      $(this).on('change', function(){
 //          limit = $(this).parent().parent().parent().find('.countSelectDinner').html();

@@ -638,5 +638,30 @@
                 $('.view-my-selection-button').prop('disabled', true);
             }
         });
+
+        function countSelectDinner(input){
+    
+            $(input).each(function (){
+            
+                $(this).on('change', function(){
+                    limit = $(this).parent().parent().parent().find('.countSelectDinner').html();
+                    countlimit = parseInt(limit);
+                countLengthSelect=$(this).parent().parent().parent().parent().find('input[type="checkbox"]:checked').length;
+
+                    //  Other case  
+                if(countLengthSelect >= countlimit){
+                    $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",true);
+                }else{
+                    $(this).parent().parent().parent().parent().find('input[type="checkbox"]').not(":checked").attr("disabled",false);
+                }
+                })
+            })
+        }
+        countSelectDinner('.cavery-option input[type="checkbox"]');
+        countSelectDinner('.hot-option input[type="checkbox"]');
+        countSelectDinner('.seafood-option input[type="checkbox"]');
+        countSelectDinner('.salad-option input[type="checkbox"]');
+        countSelectDinner('.sweet-option input[type="checkbox"]'); 
+        });
     </script>
 @endsection
