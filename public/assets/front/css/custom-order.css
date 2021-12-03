@@ -865,6 +865,7 @@ input[type=number]::-webkit-inner-spin-button {
 .dinner-page .select-title h4.card-title-font,.dinner-page .select-title span.card-title-font{
     font-size: 20px;
     color: #8EC39B;
+    margin-bottom: 0px;
 }
 .option3-section.dinner .check-1 span{
     font-size: 18px;
@@ -873,13 +874,31 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
 }
-.dinner-bavver .form-check{
+.lunch-page .dinner-bavver .form-check{
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 .dinner-bavver .form-check-label.items-name{
     width: 75%;
+}
+.dinner-page .dinner-cafe-section .check-1{
+    display:flex;
+    align-items: center;
+}
+.dinner-page .additional-section .form-check .form-check-label.items-name{
+    margin-top: -3px;
+}
+.double-column-ul ul{
+    column-gap: 30px;
+}
+@media (max-width:1368px) {
+    .dinner-page .card-header-title h4{
+        font-size: 22px !important;
+    }
+    .finger-food{
+        display: none !important;
+    }
 }
 @media screen and  (min-width:1368px){
 
@@ -992,7 +1011,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width:991px) {
-
+    
     .review-table .why-just{
 
         min-height: 0px !important;
@@ -1110,6 +1129,9 @@ input[type=number]::-webkit-inner-spin-button {
         margin: 0px ;
 
     }
+    .dinner-page .additional-section{
+        margin-left: 15px !important;
+    }
 
 }
 
@@ -1224,6 +1246,10 @@ input[type=number]::-webkit-inner-spin-button {
     .food-section .left-white{
         transform: unset;
         margin-left: 15px !important;
+    }
+    .dinner-page .food-section .col-lg-4:last-child{
+        flex: 0 0 80%;
+        max-width: 80%;
     }
 
 }

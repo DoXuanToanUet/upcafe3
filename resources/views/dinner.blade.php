@@ -51,7 +51,7 @@
                                         ?>
                                         <div class="col-lg-6 col-md-12 col-12">
                                             @for($i=0;$i<$count;$i++)
-                                                <div class="option3-section option-dinner<?= $i;?>">
+                                                <div class="option3-section option3-section-main option-dinner<?= $i;?>">
                                                     <div class="row" style="margin-top: 44px;">
                                                         <div class="col-md-12">
 
@@ -119,10 +119,10 @@
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
+                                                                                                                    <div class=" height "  style="padding:30px;background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                         @foreach($data['carvery'] as $d)
                                                                                                                             <div class="check-1">
-                                                                                                                                <input class="form-check-input carvery-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                                <input class="form-check-input carvery-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="carvery[]"> &nbsp; <span>{{$d->name}}</span>
                                                                                                                             </div>
                                                                                                                         @endforeach
                                                                                                                     </div>
@@ -153,10 +153,10 @@
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                                <div class=" height  p-5"  style="background-color: white; border: none !important; border-radius: none !important;"  >
+                                                                                                                <div class=" height  "  style="padding:30px;background-color: white; border: none !important; border-radius: none !important;"  >
                                                                                                                     @foreach($data['sea-food'] as $d)
                                                                                                                         <div class="check-1">
-                                                                                                                            <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}
+                                                                                                                            <input class="form-check-input seafood-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="sea-food[]"> &nbsp; <span>{{$d->name}}</span>
                                                                                                                         </div>
                                                                                                                     @endforeach
                                                                                                                 </div>
@@ -284,7 +284,7 @@
                                                                                     <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                                                                         <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
                                                                                         <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                                        <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+                                                                                        <input class="form-check-input setup-dinner-radio check-dinner-select" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
     
                                                                                     </div>
                                                                                 @endif
@@ -309,7 +309,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-12 col-12">
                                             @for($i=$count;$i<$exact;$i++)
-                                                <div class="option3-section">
+                                                <div class="option3-section option3-section-main ">
                                                     <div class="row" style="margin-top: 44px;">
                                                         <div class="col-md-12">
                                                             <div class="full full-custom card " style="border:none;">
@@ -535,7 +535,7 @@
                                                                             <div class="selection" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                                                                 <span class="selection-name" style="font-size: 18px; font-weight: 500; color: #8EC39B; text-transform: uppercase;">{{$s->name}}</span>
                                                                                 <span class="price-span">$ <?=number_format($s->price,2)?></span>
-                                                                                <input class="form-check-input setup-dinner-radio" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
+                                                                                <input class="form-check-input setup-dinner-radio check-dinner-select" type="radio" value="{{$s->id}}" id="flexCheckDefault" name="setup">&nbsp; &nbsp;
     
                                                                             </div>
                                                                         @endif
@@ -558,11 +558,11 @@
                                 @if(isset($data) && isset($data['beverage']) && count($data['beverage']) > 0)
                                     <div class="col-lg-4 col-md-12 col-12 option3-section">
                                         <div class="row marign-top-44">
-                                            <div class="col-12">
-                                                <div class="additional-section">
-                                                    <div class="full full-custom p-3 pb-5 " style="background-color: white;">
-                                                        <div class="bever dinner-bavver" style="margin-top: 12px;">
-                                                            <div class="row">
+                                            <div class="">
+                                                <div class="additional-section" style="margin-left:50px">
+                                                    <div class="full " style="background-color: white;">
+                                                        <div class="bever dinner-bavver" style="">
+                                                            <div class="row align-items-center" style="margin-bottom:30px">
                                                                 <div class="col">
                                                                     <h3 style="font-weight: bold;">BEVERAGES</h3>
                                                                 </div>
@@ -571,11 +571,11 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="row p-3">
+                                                            <div class="row">
                                                             @foreach($data['beverage'] as $d)
 
                                                                     <div class="col-md-12">
-                                                                        <div class="form-check mt-5">
+                                                                        <div class="form-check ">
                                                                             <input class="form-check-input" type="checkbox" value="{{$d->id}}" id="flexCheckDefault" name="beverage[]">
                                                                             <label class="form-check-label items-name" for="flexCheckDefault">
                                                                                 {{$d->name}}
@@ -655,24 +655,13 @@
 
 @section('scripts')
     <script>
-        // $.noConflict;
         function findSumSelect(param,input){
            return  $(param).closest('.option3-section').find(input).html();
         }
-        
         var countCheckbox = 0;
-        // let classId = '';
         countButton = 0;
-        // var dxt;
-        // $('.setup-dinner-radio').on('click', function () {
-        //     if($(this).is(":checked")){
-        //         dxt=1;
-        //     }
-        // })
         $('body').on('change', '.check-dinner-input', function () {
-            // let test = [];
-            // classId = `option-${$(this).attr('data-id')}`;
-            // $(this).closest('.option3-section').find('.setup-dinner-radio').addClass(classId);
+            let countCheckbox=0;
             countCarvery=findSumSelect(this,'.cavery-option .countSelectDinner');
             countHot=findSumSelect(this,'.hot-option .countSelectDinner');
             countSalad=findSumSelect(this,'.salad-option .countSelectDinner');
@@ -680,7 +669,7 @@
             countSweet=findSumSelect(this,'.sweet-option .countSelectDinner');
             
             countSum = parseInt(countCarvery) +  parseInt(countHot) +  parseInt(countSalad)+  parseInt(countSeafood) +  parseInt(countSweet)
-
+            $('.view-my-selection-button').prop('disabled', true);
             $(this).closest('.option3-section').find('.dinner-card .form-check-input').on('change',function(){
                
                 if($(this).is(":checked")){
@@ -688,23 +677,14 @@
                 }else{
                     countCheckbox=countCheckbox-1;
                 }
-                // $(document).on('click', '.setup-dinner-radio',function () {
-                //     if($(this).is(":checked")){
-                //         dxt=1;
-                        
-                //     }
-                // });
-                if ( countCheckbox >= countSum  ) {
-                   
+                if ( countCheckbox >= countSum   ) {
                     if ($('.view-my-selection-button').prop('disabled')) {
                         $('.view-my-selection-button').prop('disabled', false);
                         }
                     } else {
                         $('.view-my-selection-button').prop('disabled', true);
                     }
-            } )
-
-            
+            } )   
         });
         function countSelectDinner(input){
     
